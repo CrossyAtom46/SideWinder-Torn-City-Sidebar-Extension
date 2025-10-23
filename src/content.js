@@ -2,27 +2,12 @@
   'use strict';
   const STORAGE_TYPE = typeof chrome !== 'undefined' && chrome.storage && chrome.storage.local ? 'chrome' : 'local';
   const CONSTANTS = {
-    VERSION: '1.1',
+    VERSION: '1.2',
     SIDEBAR_WIDTH: 475,
     MIN_GROUP_WIDTH: 180,
     MIN_GROUP_HEIGHT: 100,
     TRADEMARK: '𝕊𝕚𝕕𝕖𝕎𝕚𝕟𝕕𝕖𝕣🔰',
-    TAGLINES: ["Made with love by Doobiesuckin [3255641]", "Sometimes, It Doobiesuckin", "Hope your Enjoying the SideWinder Script!", "Does anyone actually read these?", "Tokyo Syndicate is the Best Faction",
-      "Detecting Multiple Leviathan Class lifeforms in the Region", "Wanna Sign My Petition?", "Gordon! Get away from the Beam!", "Wait...If I smack Dwayne Johnsons butt, Did I hit rock bottom?", "I wrote this Splash Text on 12-29-24",
-      "A Friend with Weed is a Friend Indeed", "So, You like Jazz?", "Fixing Torn's UI One Script at a Time!", "Caution: May contain nuts.", "All bugs are intentional. Trust the process", "This Sidebar is Fully optimized for staring contests.",
-      "You Should give me a Donation, You know you want to", "Check out Community Crafters on Discord Forums!", "30% Less Likely to scam you over Leslie!", "Did you know? The average cloud weighs about 1 million pounds!",
-      "Did you know? Some snails can sleep for three years straight!", "Did you know? Cheese is the most stolen food in the world!", "Be sure to Like and Review our Forum post!", "-Insert Cool Sidebar Music-",
-      "I'm alive! I'm Ali...ERR0r..Sidewinder Re-Initialized", "A Script Chedburn Himself is Jealous of!", "Woah, Was that Legal?", "Still trying to find the funny", "Did you Take a Xanax Today?", "Remember Bazaars? Those were cool huh",
-      "Keep Grinding those Crimes!", "Why not sign yourself up for a race?", "Your so close to that Gambling win, I can Feel it!", "Voice Mode Enabled, You can now Start Voicing Commands", "Ooh Baby, I'm debugging myself right now.",
-      "Never Gonna Give you up, Never gonna let you down", "1f c0d3 === l1f3) { r3sp4wn();", "I don't even know how to code! -Doobie", "There's no place like 127.0.0.1...", "Happiness is just a hospital trip away.",
-      "One man's trash is another's bazaar stock.", "Sleep is overrated when there's money to be mugged.", "Peace is just the downtime between wars.", "You call it scamming. We call it creative capitalism.",
-      "You can Drag and Resize Groups in Edit Mode", "You can Delete Links, Targets, Groups and more In Delete Mode", "Create New Groups by Clicking the Green + button!", "Use Unicode when Selectiong Emojis for Links", "Find me on Dread! JK",
-      "Struggle is the enemy, Weed is my remedy", "Dirty Hands, Clean Money", "Loading Additional Skill Modules", "Fire Script. No cap, On God - You Probably", "Idle Hands Leave you evil thoughts", "100% American Made",
-      "If Diddy Did Diddle Dudes, How many Dudes Did Diddy Diddle?", "Add a new Link! I can Take it!", "Why'd you just do that?", "You've been Blessed! No OD's For 0.25 seconds! Better Hurry!", "Is this thing on",
-      "01010101 01001110 01100101 01110010 01100100", "Shout out my dog, Torque the Husky", "Find Torn Tutorials on Youtube, Forums, and more!", "That didnt go to plan...", "Grass tastes bad", "Thats what she said", "28:06:42:12",
-      "I have an inferiority complex, but it's not a very good one", "You've gotta hand it to blind prostitutes.", "I havent slept for 4 days! That would be too long.", "I, for one, like Roman numerals.", "Remember, There is no i in denial",
-      "This Script is Open Source on Github!",
-    ],
+    TAGLINES: ["Made with love by Doobiesuckin [3255641]", "Sometimes, It Doobiesuckin", "Hope your Enjoying the SideWinder Script!", "Does anyone actually read these?", "Tokyo Syndicate is the Best Faction", "Detecting Multiple Leviathan Class lifeforms in the Region", "Wanna Sign My Petition?", "Gordon! Get away from the Beam!", "Wait...If I smack Dwayne Johnsons butt, Did I hit rock bottom?", "I wrote this Splash Text on 12-29-24", "A Friend with Weed is a Friend Indeed", "So, You like Jazz?", "Fixing Torn's UI One Script at a Time!", "Caution: May contain nuts.", "All bugs are intentional. Trust the process", "This Sidebar is Fully optimized for staring contests.", "You Should give me a Donation, You know you want to", "Check out Community Crafters on Discord Forums!", "30% Less Likely to scam you over Leslie!", "Did you know? The average cloud weighs about 1 million pounds!", "Did you know? Some snails can sleep for three years straight!", "Did you know? Cheese is the most stolen food in the world!", "Be sure to Like and Review our Forum post!", "-Insert Cool Sidebar Music-", "I'm alive! I'm Ali...ERR0r..Sidewinder Re-Initialized", "A Script Chedburn Himself is Jealous of!", "Woah, Was that Legal?", "Still trying to find the funny", "Did you Take a Xanax Today?", "Remember Bazaars? Those were cool huh", "Keep Grinding those Crimes!", "Why not sign yourself up for a race?", "Your so close to that Gambling win, I can Feel it!", "Voice Mode Enabled, You can now Start Voicing Commands", "Ooh Baby, I'm debugging myself right now.", "Never Gonna Give you up, Never gonna let you down", "1f c0d3 === l1f3) { r3sp4wn();", "I don't even know how to code! -Doobie", "There's no place like 127.0.0.1...", "Happiness is just a hospital trip away.", "One man's trash is another's bazaar stock.", "Sleep is overrated when there's money to be mugged.", "Peace is just the downtime between wars.", "You call it scamming. We call it creative capitalism.", "You can Drag and Resize Groups in Edit Mode", "You can Delete Links, Targets, Groups and more In Delete Mode", "Create New Groups by Clicking the Green + button!", "Use Unicode when Selectiong Emojis for Links", "Find me on Dread! JK", "Struggle is the enemy, Weed is my remedy", "Dirty Hands, Clean Money", "Loading Additional Skill Modules", "Fire Script. No cap, On God - You Probably", "Idle Hands Leave you evil thoughts", "100% American Made", "If Diddy Did Diddle Dudes, How many Dudes Did Diddy Diddle?", "Add a new Link! I can Take it!", "Why'd you just do that?", "You've been Blessed! No OD's For 0.25 seconds! Better Hurry!", "Is this thing on", "01010101 01001110 01100101 01110010 01100100", "Shout out my dog, Torque the Husky", "Find Torn Tutorials on Youtube, Forums, and more!", "That didnt go to plan...", "Grass tastes bad", "Thats what she said", "28:06:42:12", "I have an inferiority complex, but it's not a very good one", "You've gotta hand it to blind prostitutes.", "I havent slept for 4 days! That would be too long.", "I, for one, like Roman numerals.", "Remember, There is no i in denial", "This Script is Open Source on Github!", ],
     STATE_KEYS: {
       SIDEBAR_POSITION: 'sidebarPosition',
       GROUPS: 'sidebarGroups',
@@ -105,7 +90,7 @@
     chatOverrideVisible: false,
     calculatorVisible: false,
     backgroundEnabled: false,
-    backgroundImages: ['https://raw.githubusercontent.com/BigBongTheory42/SideWinder-Torn-City-Sidebar-Extension/refs/heads/main/SideWinder_TornCity_Doobiesuckin_1.1/assets/DefaultBackgroundimage.png'],
+    backgroundImages: ['https://raw.githubusercontent.com/BigBongTheory42/SideWinder-Torn-City-Sidebar-Extension/refs/heads/main/src/assets/DefaultBackgroundimage.png'],
     currentBackgroundIndex: 0,
     parallaxSpeed: 0.1
   };
@@ -309,7 +294,7 @@
           toastLeft = sidebarRect.left + (sidebarRect.width / 2) - 150;
         }
       }
-      toast.style.cssText = `position: fixed; bottom: 50px; left: ${typeof toastLeft === 'number' ? toastLeft + 'px' : 'auto'}; right: ${typeof toastRight === 'number' ? toastRight + 'px' : 'auto'}; width: 300px; padding: 10px 15px; background-color: ${backgroundColor}; color: ${textColor}; border: 1px solid ${borderColor}; border-radius: 5px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); z-index: 992000; text-align: center; animation: toastFadeIn 0.3s ease;`;
+      toast.style.cssText = `position: fixed; bottom: 50px; left: ${typeof toastLeft === 'number' ? toastLeft + 'px' : 'auto'}; right: ${typeof toastRight === 'number' ? toastRight + 'px' : 'auto'}; width: 300px; padding: 10px 15px; box-sizing: border-box; background-color: ${backgroundColor}; color: ${textColor}; border: 1px solid ${borderColor}; border-radius: 5px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); z-index: 991500; text-align: center; animation: toastFadeIn 0.3s ease;`;
       const style = document.createElement('style');
       style.textContent = `@keyframes toastFadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } } @keyframes toastFadeOut { from { opacity: 1; transform: translateY(0); } to { opacity: 0; transform: translateY(20px); } }`;
       document.head.appendChild(style);
@@ -473,9 +458,7 @@
           return parseInt(validId);
         }
       }
-      const idSelectors = ['[class*="userID"]', '[class*="userId"]', '[id*="userID"]', '[id*="userId"]', '.basic-information .user-info-value', '.profile-container [class*="id"]', '.profile-wrapper [class*="id"]', '[data-user]', '[data-uid]',
-        '[data-player-id]'
-      ];
+      const idSelectors = ['[class*="userID"]', '[class*="userId"]', '[id*="userID"]', '[id*="userId"]', '.basic-information .user-info-value', '.profile-container [class*="id"]', '.profile-wrapper [class*="id"]', '[data-user]', '[data-uid]', '[data-player-id]'];
       for (const selector of idSelectors) {
         const element = document.querySelector(selector);
         if (element) {
@@ -572,7 +555,7 @@
     createResizer: (element, isLightMode, isEditMode, onResize) => {
       const resizer = document.createElement('div');
       resizer.setAttribute('data-resizer', 'true');
-      resizer.style.cssText = `width: 20px; height: 20px; background-color: ${isLightMode ? '#999' : '#666'}; position: absolute; right: 0; bottom: 0; cursor: se-resize; border-radius: 0 0 5px 0; display: ${isEditMode ? 'flex' : 'none'}; align-items: center; justify-content: center; color: white; font-size: 12px; transition: background-color 0.2s; z-index: 9910;`;
+      resizer.style.cssText = `width: 20px; height: 20px; background-color: ${isLightMode ? '#999' : '#666'}; position: absolute; right: 0px; bottom: 0px; cursor: se-resize; border-radius: 0 0 5px 0; display: ${isEditMode ? 'flex' : 'none'}; align-items: center; justify-content: center; color: white; font-size: 12px; transition: background-color 0.2s; z-index: 9910;`;
       resizer.innerHTML = '⮧';
 
       function handleResize(mouseEvent) {
@@ -659,7 +642,7 @@
     },
     createOverlay: (theme) => {
       const overlay = document.createElement('div');
-      overlay.style.cssText = `position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.7); display: flex; align-items: center; justify-content: center; z-index: 992000;`;
+      overlay.style.cssText = `position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background: rgba(0, 0, 0, 0.7); display: flex; align-items: center; justify-content: center; z-index: 991500;`;
       return overlay;
     },
     createDialogContainer: (title, theme) => {
@@ -668,8 +651,7 @@
       dialog.innerHTML = `<h3 style="color: ${theme.TEXT}; margin: 0 0 15px 0;">${title}</h3>`;
       return dialog;
     },
-    createDialogButtons: (theme) =>
-      `<div style="display: flex; gap: 10px; justify-content: flex-end; margin-top: 20px;"><button type="button" class="cancelBtn" style="padding: 5px 15px; border-radius: 3px; border: none; background: ${theme.BUTTON_BG}; color: ${theme.TEXT}; cursor: pointer;">Cancel</button><button type="submit" style="padding: 5px 15px; border-radius: 3px; border: none; background: ${theme.SUCCESS}; color: white; cursor: pointer;">OK</button></div>`,
+    createDialogButtons: (theme) => `<div style="display: flex; gap: 10px; justify-content: flex-end; margin-top: 20px;"><button type="button" class="cancelBtn" style="padding: 5px 15px; border-radius: 3px; border: none; background: ${theme.BUTTON_BG}; color: ${theme.TEXT}; cursor: pointer;">Cancel</button><button type="submit" style="padding: 5px 15px; border-radius: 3px; border: none; background: ${theme.SUCCESS}; color: white; cursor: pointer;">OK</button></div>`,
     createEmojiButtons: (theme) => {
       const containerId = `emoji-picker-${Math.random().toString(36).slice(2)}`;
       setTimeout(() => loadEmojiPicker(containerId, theme), 0);
@@ -695,7 +677,7 @@
             <button type="button" class="category-btn" data-category="symbols" style="background: none; border: none; cursor: pointer; padding: 5px; opacity: 0.7;">❤️</button>
             <button type="button" class="category-btn" data-category="travel" style="background: none; border: none; cursor: pointer; padding: 5px; opacity: 0.7;">🌍</button>
             </div>
-            <div class="emoji-container" style="max-height: 200px; overflow-y: auto; padding: 10px;"></div>
+            <div class="emoji-container" style="max-height: 200px; overflow-y: auto; scrollbar-width: thin; padding: 10px;"></div>
             </div>
             </div>`;
     }
@@ -883,7 +865,7 @@
             padding-bottom: 3px;
             border-bottom: 1px solid ${theme.BORDER || '#e0e0e0'};
             position: sticky;
-            top: 0;
+            top: 0px;
             background: ${theme.BG || '#ffffff'};
             z-index: 1;
             `;
@@ -1150,9 +1132,7 @@
         const dialogId = existingDialogId || 'dialog_' + Date.now();
         const overlay = dom.createOverlay(theme);
         const dialog = dom.createDialogContainer(title, theme);
-        const fieldInputs = fields.map(field =>
-          `<div style="margin-bottom: 10px;"><label style="color: ${theme.TEXT}; display: block; margin-bottom: 5px;">${field.label}:</label><input type="${field.type || 'text'}" id="${field.id}_${dialogId}" style="width: 100%; padding: 5px; background: ${theme.BG}; border: 1px solid ${theme.BORDER}; color: ${theme.TEXT}; border-radius: 3px; ${field.type === 'checkbox' ? 'width: auto;' : ''}" ${field.type === 'checkbox' ? 'class="checkbox-input"' : ''}></div>`
-          ).join('');
+        const fieldInputs = fields.map(field => `<div style="margin-bottom: 10px;"><label style="color: ${theme.TEXT}; display: block; margin-bottom: 5px;">${field.label}:</label><input type="${field.type || 'text'}" id="${field.id}_${dialogId}" style="width: 100%; padding: 5px; background: ${theme.BG}; border: 1px solid ${theme.BORDER}; color: ${theme.TEXT}; border-radius: 3px; ${field.type === 'checkbox' ? 'width: auto;' : ''}" ${field.type === 'checkbox' ? 'class="checkbox-input"' : ''}></div>`).join('');
         dialog.innerHTML += `<form id="promptForm_${dialogId}">${fieldInputs}${dom.createDialogButtons(theme)}</form>`;
 
         function cleanup() {
@@ -1533,7 +1513,7 @@
         const dialog = dom.createDialogContainer('Manage Clock Resets', theme);
         let resetTimesHtml = '<div style="margin-bottom: 15px;">';
         resetTimesHtml += '<div style="color: ' + theme.TEXT + '; margin-bottom: 10px; font-weight: bold;">Reset Times (GMT):</div>';
-        resetTimesHtml += '<div id="resetTimesList_' + dialogId + '" style="border: 1px solid ' + theme.BORDER + '; border-radius: 3px; max-height: 250px; overflow-y: auto; background: ' + theme.BG + ';">';
+        resetTimesHtml += '<div id="resetTimesList_' + dialogId + '" style="border: 1px solid ' + theme.BORDER + '; border-radius: 3px; max-height: 250px; overflow-y: auto; scrollbar-width: thin; background: ' + theme.BG + ';">';
         clock.resetTimes.forEach((reset, idx) => {
           const isChecked = reset.displayed ? 'checked' : '';
           const resetItemHtml = `
@@ -1670,13 +1650,13 @@
         sidebar.id = 'enhanced-sidebar';
         sidebar.style.cssText = `
                 position: fixed;
-                top: 0;
+                top: 0px;
                 ${state.isSidebarRight ? 'right' : 'left'}: 0;
                 width: ${CONSTANTS.SIDEBAR_WIDTH}px;
                 height: 100%;
                 background-color: ${theme.BG};
                 color: ${theme.TEXT};
-                z-index: 991000;
+                z-index: 991500;
                 display: flex;
                 flex-direction: column;
                 border-${state.isSidebarRight ? 'left' : 'right'}: 2px solid ${theme.BORDER};
@@ -1697,7 +1677,7 @@
             position: absolute;
             bottom: 50px;
             left: 10px;
-            z-index: 991101;
+            z-index: 991500;
             `;
         sidebar.appendChild(topBar);
         sidebar.appendChild(groupContainer);
@@ -1727,7 +1707,7 @@
       const sidebarState = utils.loadState(CONSTANTS.STATE_KEYS.SIDEBAR_STATE, {
         isHidden: false
       });
-      toggleButton.style.cssText = `position: fixed; background-color: ${sidebarState.isHidden ? '#333333' : '#444444'}; color: ${theme.TEXT}; border: none; padding: 12px; cursor: pointer; z-index: 999999; transition: transform 0.3s ease-in-out, background-color 0.2s ease; border-radius: 4px; visibility: visible !important; opacity: 1 !important; box-shadow: 0 2px 5px rgba(0,0,0,0.2); display: flex; align-items: center; justify-content: center; min-width: 48px; min-height: 48px; transform: ${sidebarState.isHidden ? 'rotate(180deg)' : 'rotate(0deg)'};`;
+      toggleButton.style.cssText = `position: fixed; background-color: ${sidebarState.isHidden ? '#333333' : '#444444'}; color: ${theme.TEXT}; border: none; padding: 12px; cursor: pointer; z-index: 999900; transition: transform 0.3s ease-in-out, background-color 0.2s ease; border-radius: 4px; visibility: visible !important; opacity: 1 !important; box-shadow: 0 2px 5px rgba(0,0,0,0.2); display: flex; align-items: center; justify-content: center; min-width: 48px; min-height: 48px; transform: ${sidebarState.isHidden ? 'rotate(180deg)' : 'rotate(0deg)'};`;
       const savedBtnPos = localStorage.getItem('sidebarBtnPos') || 'top-left';
       setTimeout(() => updateSidebarBtnPosition(savedBtnPos), 0);
       toggleButton.addEventListener('click', () => {
@@ -1764,7 +1744,7 @@
     createGroupContainer: () => {
       const container = document.createElement('div');
       container.id = 'group-container';
-      container.style.cssText = `flex-grow: 1; padding: 10px; margin-top: 50px; margin-bottom: 30px; position: relative; overflow-y: auto; overflow-x: hidden;`;
+      container.style.cssText = `flex-grow: 1; padding: 10px; margin-top: 50px; margin-bottom: 30px; position: relative; overflow-y: auto; scrollbar-width: thin; overflow-x: hidden;`;
       return container;
     },
     createTagline: () => {
@@ -1800,7 +1780,7 @@
       const theme = utils.getTheme();
       const topBar = document.createElement('div');
       topBar.id = 'top-bar';
-      topBar.style.cssText = `display: flex; justify-content: space-between; align-items: center; padding: 10px; background-color: #2c2c2c; border-bottom: 1px solid #444444; width: 100%; position: absolute; top: 0; height: 50px; box-sizing: border-box; z-index: 991101;`;
+      topBar.style.cssText = `display: flex; justify-content: space-between; align-items: center; padding: 10px; background-color: #2c2c2c; border-bottom: 1px solid #444444; width: 100%; position: absolute; top: 0px; height: 50px; box-sizing: border-box; z-index: 991500;`;
       const trademarkContainer = document.createElement('div');
       trademarkContainer.style.cssText = `position: absolute; left: 60px; color: white; font-style: italic; font-size: 14px; white-space: nowrap; pointer-events: none; margin-left: 10px;`;
       trademarkContainer.textContent = CONSTANTS.TRADEMARK;
@@ -1866,8 +1846,7 @@
       setTimeout(() => {
         const btns = topBar.querySelectorAll('button');
         btns.forEach(btn => {
-          if ((btn.id === 'editButton' && state.isEditMode) || (btn.id === 'deleteButton' && state.isDeleteMode) || (btn.id === 'clockButton' && state.clockVisible) || (btn.id === 'calculatorButton' && state.calculatorVisible) || (btn
-              .id === 'chatButton' && state.chatOverrideVisible)) {
+          if ((btn.id === 'editButton' && state.isEditMode) || (btn.id === 'deleteButton' && state.isDeleteMode) || (btn.id === 'clockButton' && state.clockVisible) || (btn.id === 'calculatorButton' && state.calculatorVisible) || (btn.id === 'chatButton' && state.chatOverrideVisible)) {
             btn.style.boxShadow = '0 0 15px rgba(255, 255, 255, 0.5)';
           } else {
             btn.style.boxShadow = 'none';
@@ -1880,10 +1859,10 @@
     createPageSelector: (theme) => {
       const container = document.createElement('div');
       container.id = 'page-selector';
-      container.style.cssText = `position: absolute; bottom: 50px; left: 50px; z-index: 991101; display: flex; gap: 10px; align-items: center;`;
+      container.style.cssText = `position: absolute; bottom: 50px; left: 50px; z-index: 991500; display: flex; gap: 10px; align-items: center;`;
       const tooltip = document.createElement('div');
       tooltip.textContent = 'Page Selector';
-      tooltip.style.cssText = `position: absolute; background-color: ${theme.HEADER}; color: ${theme.TEXT}; padding: 5px 8px; border-radius: 4px; font-size: 12px; bottom: 0; right: -10px; transform: translateX(100%); white-space: nowrap; opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s; pointer-events: none; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);`;
+      tooltip.style.cssText = `position: absolute; background-color: ${theme.HEADER}; color: ${theme.TEXT}; padding: 5px 8px; border-radius: 4px; font-size: 12px; bottom: 0px; right: -10px; transform: translateX(100%); white-space: nowrap; opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s; pointer-events: none; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);`;
       container.appendChild(tooltip);
       const currentPageCircle = document.createElement('div');
       currentPageCircle.style.cssText = `width: 30px; height: 30px; border-radius: 50%; background-color: ${theme.BottomButtonBG}; color: ${theme.TEXT}; display: flex; justify-content: center; align-items: center; cursor: pointer; font-weight: bold; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); transition: all 0.2s ease; position: relative;`;
@@ -1905,7 +1884,7 @@
       });
       const pageMenu = document.createElement('div');
       pageMenu.id = 'page-menu';
-      pageMenu.style.cssText = `position: absolute; left: 0; bottom: 40px; display: none; flex-direction: column-reverse; gap: 10px; z-index: 991200; transition: all 0.3s ease; padding-bottom: 5px;`;
+      pageMenu.style.cssText = `position: absolute; left: 0px; bottom: 40px; display: none; flex-direction: column-reverse; gap: 10px; z-index: 991500; transition: all 0.3s ease; padding-bottom: 5px;`;
 
       function setupPageCircleEvents(pageCircle, pageIndex) {
         pageCircle.addEventListener('mouseover', () => {
@@ -1931,10 +1910,14 @@
       }
 
       function showPageNumber(number) {
-        const originalContent = currentPageCircle.innerHTML;
         currentPageCircle.innerHTML = number;
         setTimeout(() => {
-          currentPageCircle.innerHTML = originalContent;
+          currentPageCircle.innerHTML = '';
+          const img = document.createElement('img');
+          img.src = chrome.runtime.getURL('assets/pages.svg');
+          img.alt = 'Pages';
+          img.style.cssText = `width: 12px; height: 12px; vertical-align: middle;`;
+          currentPageCircle.appendChild(img);
         }, 1000);
       }
       for (let i = 0; i < 3; i++) {
@@ -2000,8 +1983,7 @@
         }
         const buttons = document.querySelectorAll('#top-bar button');
         buttons.forEach(btn => {
-          if ((btn.id === 'editButton' && state.isEditMode) || (btn.id === 'deleteButton' && state.isDeleteMode) || (btn.id === 'clockButton' && state.clockVisible) || (btn.id === 'calculatorButton' && state.calculatorVisible) || (btn
-              .id === 'chatButton' && state.chatOverrideVisible)) {
+          if ((btn.id === 'editButton' && state.isEditMode) || (btn.id === 'deleteButton' && state.isDeleteMode) || (btn.id === 'clockButton' && state.clockVisible) || (btn.id === 'calculatorButton' && state.calculatorVisible) || (btn.id === 'chatButton' && state.chatOverrideVisible)) {
             btn.style.boxShadow = '0 0 15px rgba(255, 255, 255, 0.5)';
           } else {
             btn.style.boxShadow = 'none';
@@ -2581,7 +2563,7 @@
       const theme = utils.getTheme();
       const menu = document.createElement('div');
       menu.id = 'addMenu';
-      menu.style.cssText = `position: absolute; top: 50px; right: 10px; background-color: ${theme.SECONDARY_BG}; border: 1px solid ${theme.BORDER}; border-radius: 4px; padding: 5px; z-index: 991200; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);`;
+      menu.style.cssText = `position: absolute; top: 50px; right: 10px; background-color: ${theme.SECONDARY_BG}; border: 1px solid ${theme.BORDER}; border-radius: 4px; padding: 5px; z-index: 991500; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);`;
       const options = [{
         text: 'Add Group',
         action: actions.addGroup
@@ -3067,7 +3049,7 @@ ${dom.createDialogButtons(theme)}
     if (!sidebar || document.getElementById('sidebar-width-resizer')) return;
     const resizer = document.createElement('div');
     resizer.id = 'sidebar-width-resizer';
-    resizer.style.cssText = `position: absolute; top: 0; width: 8px; height: 100%; cursor: ew-resize; z-index: 991001; background: transparent;`;
+    resizer.style.cssText = `position: absolute; top: 0px; width: 8px; height: 100%; cursor: ew-resize; z-index: 991500; background: transparent;`;
     updateResizerPosition(resizer);
     let startX, startWidth;
     resizer.addEventListener('mousedown', (e) => {
@@ -4681,7 +4663,7 @@ ${dom.createDialogButtons(theme)}
   function createAuctionsContainer(theme, secondaryColor) {
     const container = document.createElement('div');
     container.className = 'content-container';
-    container.style.cssText = `display: flex; flex-wrap: wrap; gap: 4px; width: 100%; max-height: calc(100% - 40px); overflow-y: auto;`;
+    container.style.cssText = `display: flex; flex-wrap: wrap; gap: 4px; width: 100%; max-height: calc(100% - 40px); overflow-y: auto; scrollbar-width: thin;`;
     state.auctionTracker.auctions?.forEach((auction, index) => {
       container.appendChild(createAuctionElement(auction, index, theme, secondaryColor));
     });
@@ -4928,7 +4910,7 @@ ${dom.createDialogButtons(theme)}
       colorPickerContainer.style.cssText = `background-color: ${theme.SECONDARY_BG}; padding: 20px; border-radius: 5px; min-width: 300px; border: 1px solid ${theme.BORDER}; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);`;
       const header = document.createElement('h3');
       header.textContent = 'Pick a Color';
-      header.style.cssText = `margin-top: 0; margin-bottom: 15px; color: ${theme.TEXT};`;
+      header.style.cssText = `margin-top: 0px; margin-bottom: 15px; color: ${theme.TEXT};`;
       const colorInput = document.createElement('input');
       colorInput.type = 'color';
       colorInput.value = element.color || theme.SECONDARY_BG;
@@ -5200,7 +5182,7 @@ ${dom.createDialogButtons(theme)}
     border-radius: 5px;
     padding: 10px;
     width: 220px;
-    z-index: 991200;
+    z-index: 991500;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     color: ${theme.TEXT};
     text-align: center;
@@ -5317,6 +5299,7 @@ ${dom.createDialogButtons(theme)}
       isLightMode: state.isLightMode,
       isSidebarRight: state.isSidebarRight,
       legibleNamesEnabled: state.legibleNamesEnabled,
+      storageManagerEnabled: state.storageManagerEnabled,
       currentPage: state.currentPage,
       pageData: state.pageData,
       backgroundEnabled: state.backgroundEnabled,
@@ -5324,8 +5307,8 @@ ${dom.createDialogButtons(theme)}
       currentBackgroundIndex: state.currentBackgroundIndex,
       parallaxSpeed: state.parallaxSpeed,
       isAutoWidth: state.isAutoWidth,
-      topbarClockResetHour: state.topbarClockResetHour,
-      storageManagerEnabled: state.storageManagerEnabled
+      clockVisible: state.clockVisible,
+      chatOverrideVisible: state.chatOverrideVisible
     };
     const blob = new Blob([JSON.stringify(data, null, 2)], {
       type: 'application/json'
@@ -5360,7 +5343,7 @@ ${dom.createDialogButtons(theme)}
     transition: all 0.2s ease;
     position: absolute;
     bottom: -40px;
-    z-index: 991101;
+    z-index: 991500;
     `;
     const settingsIcon = document.createElement('img');
     settingsIcon.src = chrome.runtime.getURL('assets/settings.svg');
@@ -5376,7 +5359,7 @@ ${dom.createDialogButtons(theme)}
     padding: 5px 8px;
     border-radius: 4px;
     font-size: 12px;
-    bottom: 0;
+    bottom: 0px;
     right: -10px;
     transform: translateX(100%);
     white-space: nowrap;
@@ -5444,6 +5427,7 @@ ${dom.createDialogButtons(theme)}
           if (data.isLightMode !== undefined) state.isLightMode = data.isLightMode;
           if (data.isSidebarRight !== undefined) state.isSidebarRight = data.isSidebarRight;
           if (data.legibleNamesEnabled !== undefined) state.legibleNamesEnabled = data.legibleNamesEnabled;
+          if (data.storageManagerEnabled !== undefined) state.storageManagerEnabled = data.storageManagerEnabled;
           if (data.currentPage !== undefined) state.currentPage = data.currentPage;
           if (data.pageData !== undefined) state.pageData = data.pageData;
           if (data.backgroundEnabled !== undefined) state.backgroundEnabled = data.backgroundEnabled;
@@ -5451,8 +5435,8 @@ ${dom.createDialogButtons(theme)}
           if (data.currentBackgroundIndex !== undefined) state.currentBackgroundIndex = data.currentBackgroundIndex;
           if (data.parallaxSpeed !== undefined) state.parallaxSpeed = data.parallaxSpeed;
           if (data.isAutoWidth !== undefined) state.isAutoWidth = data.isAutoWidth;
-          if (data.topbarClockResetHour !== undefined) state.topbarClockResetHour = data.topbarClockResetHour;
-          if (data.storageManagerEnabled !== undefined) state.storageManagerEnabled = data.storageManagerEnabled;
+          if (data.clockVisible !== undefined) state.clockVisible = data.clockVisible;
+          if (data.chatOverrideVisible !== undefined) state.chatOverrideVisible = data.chatOverrideVisible;
           utils.saveState(`${CONSTANTS.STATE_KEYS.GROUPS}_${state.currentPage}`, state.groups);
           utils.saveState(`${CONSTANTS.STATE_KEYS.NOTEPADS}_${state.currentPage}`, state.notepads);
           utils.saveState(`${CONSTANTS.STATE_KEYS.ATTACK_LISTS}_${state.currentPage}`, state.attackLists);
@@ -5465,15 +5449,21 @@ ${dom.createDialogButtons(theme)}
           utils.saveState(CONSTANTS.STATE_KEYS.LIGHT_MODE, state.isLightMode);
           utils.saveState(CONSTANTS.STATE_KEYS.SIDEBAR_POSITION, state.isSidebarRight);
           utils.saveState(CONSTANTS.STATE_KEYS.LEGIBLE_NAMES_ENABLED, state.legibleNamesEnabled);
+          utils.saveState(CONSTANTS.STATE_KEYS.STORAGE_MANAGER_ENABLED, state.storageManagerEnabled);
           utils.saveState(CONSTANTS.STATE_KEYS.CURRENT_PAGE, state.currentPage);
           utils.saveState(CONSTANTS.STATE_KEYS.PAGE_DATA, state.pageData);
           utils.saveState(CONSTANTS.BACKGROUND_ENABLED_KEY, state.backgroundEnabled);
           utils.saveState(CONSTANTS.BACKGROUND_IMAGES_KEY, state.backgroundImages);
           utils.saveState(CONSTANTS.BACKGROUND_KEY, state.currentBackgroundIndex);
           utils.saveState(CONSTANTS.PARALLAX_SPEED_KEY, state.parallaxSpeed);
-          utils.saveState(CONSTANTS.STATE_KEYS.CLOCK_TOGGLE_RESET, state.topbarClockResetHour);
-          utils.saveState(CONSTANTS.STATE_KEYS.STORAGE_MANAGER_ENABLED, state.storageManagerEnabled);
           localStorage.setItem('sidebarAutoWidth', state.isAutoWidth ? '1' : '0');
+          if (state.backgroundEnabled) {
+            try {
+              applyBackground();
+            } catch (e) {
+              console.error('Error applying background after import:', e);
+            }
+          }
           refreshSidebar();
           utils.showToast('Data imported successfully', 'success');
         } catch (error) {
@@ -5500,9 +5490,7 @@ ${dom.createDialogButtons(theme)}
         localStorage.removeItem(`${key}_${i}_updatedAt`);
       }
     });
-    const otherKeys = [CONSTANTS.BACKGROUND_KEY, CONSTANTS.BACKGROUND_IMAGES_KEY, CONSTANTS.BACKGROUND_ENABLED_KEY, CONSTANTS.PARALLAX_SPEED_KEY, `${CONSTANTS.STATE_KEYS.CLOCKS}_0`, `${CONSTANTS.STATE_KEYS.CLOCKS}_1`,
-      `${CONSTANTS.STATE_KEYS.CLOCKS}_2`
-    ];
+    const otherKeys = [CONSTANTS.BACKGROUND_KEY, CONSTANTS.BACKGROUND_IMAGES_KEY, CONSTANTS.BACKGROUND_ENABLED_KEY, CONSTANTS.PARALLAX_SPEED_KEY, `${CONSTANTS.STATE_KEYS.CLOCKS}_0`, `${CONSTANTS.STATE_KEYS.CLOCKS}_1`, `${CONSTANTS.STATE_KEYS.CLOCKS}_2`, 'sidebarAutoWidth', 'sidebarWidth', 'sidebarBtnPos'];
     otherKeys.forEach(k => {
       try {
         localStorage.removeItem(k);
@@ -5522,22 +5510,22 @@ ${dom.createDialogButtons(theme)}
     };
     state.countdownGroups = [];
     state.manualCountdownGroups = [];
+    state.clocks = [];
     state.currentPage = 0;
     state.pageData = [{}, {}, {}];
-    state.clocks = [];
     state.legibleNamesEnabled = false;
     state.isLightMode = false;
     state.isSidebarRight = false;
     state.topbarClockResetHour = 14;
     state.backgroundEnabled = false;
-    state.backgroundImages = ['https://raw.githubusercontent.com/BigBongTheory42/SideWinder-Torn-City-Sidebar-Extension/refs/heads/main/SideWinder_TornCity_Doobiesuckin_1.1/assets/DefaultBackgroundimage.png'];
+    state.backgroundImages = ['https://raw.githubusercontent.com/BigBongTheory42/SideWinder-Torn-City-Sidebar-Extension/refs/heads/main/src/assets/DefaultBackgroundimage.png'];
     state.currentBackgroundIndex = 0;
     state.parallaxSpeed = 0.1;
     state.isAutoWidth = true;
-    state.chatOverrideVisible = false;
     state.clockVisible = false;
+    state.chatOverrideVisible = false;
     state.calculatorVisible = false;
-    if (typeof state.storageManagerEnabled !== 'undefined') state.storageManagerEnabled = false;
+    state.storageManagerEnabled = false;
     Object.keys(state).forEach(key => {
       if (CONSTANTS.STATE_KEYS[key.toUpperCase()]) {
         utils.saveState(`${CONSTANTS.STATE_KEYS[key.toUpperCase()]}_${state.currentPage}`, state[key]);
@@ -5744,17 +5732,8 @@ ${dom.createDialogButtons(theme)}
             <input type="text" id="new-image-url" placeholder="Enter image URL" style="width: 100%; padding: 5px; background: ${theme.BG}; border: 1px solid ${theme.BORDER}; color: ${theme.TEXT}; border-radius: 3px; margin-bottom: 10px;">
             <button id="add-image-btn" class="settings-button">Add Image</button>
         </div>
-        <div id="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 10px; max-height: 400px; overflow-y: auto;">
-            ${tempBackgroundImages.map((img, index) => ` < div class = "gallery-item"
-    data - index = "${index}"
-    style = "cursor: pointer; border: 2px solid ${index === tempCurrentBackgroundIndex ? theme.SUCCESS : 'transparent'}; border-radius: 5px; overflow: hidden; position: relative;" > < img src = "${img}"
-    alt = ""
-    style = "width: 100%; height: 80px; object-fit: cover;"
-    oonerror =
-      "this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjgwIiB2aWV3Qm94PSIwIDAgMTAwIDgwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iODAiIGZpbGw9IiNmZmYiLz48Y2lyY2xlIGN4PSI1MCIgY3k9IjQwIiByPSIyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOTk5OTk5IiBzdHJva2Utd2lkdGg9IjIiLz48bGluZSB4MT0iMzAiIHkxPSI2MCIgeDI9IjcwIiB5Mj0iMjAiIHN0cm9rZT0iIzk5OTk5OSIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9zdmc+';" >
-      < button class = "remove-btn"
-    data - index = "${index}"
-    style = "position: absolute; top: 0; right: 0; background: ${theme.DANGER}; color: white; border: none; width: 20px; height: 20px; font-size: 12px; cursor: pointer;" > × < /button></div > `).join('')}
+        <div id="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 10px; max-height: 400px; overflow-y: auto; scrollbar-width: thin;">
+            ${tempBackgroundImages.map((img, index) => `<div class="gallery-item"data-index="${index}"style="cursor: pointer; border: 2px solid ${index === tempCurrentBackgroundIndex ? theme.SUCCESS : 'transparent'}; border-radius: 5px; overflow: hidden; position: relative;"><img src="${img}"alt=""style="width: 100%; height: 80px; object-fit: cover;"oonerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjgwIiB2aWV3Qm94PSIwIDAgMTAwIDgwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iODAiIGZpbGw9IiNmZmYiLz48Y2lyY2xlIGN4PSI1MCIgY3k9IjQwIiByPSIyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOTk5OTk5IiBzdHJva2Utd2lkdGg9IjIiLz48bGluZSB4MT0iMzAiIHkxPSI2MCIgeDI9IjcwIiB5Mj0iMjAiIHN0cm9rZT0iIzk5OTk5OSIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9zdmc+';"><button class="remove-btn"data-index="${index}"style="position: absolute; top: 0px; right: 0px; background: ${theme.DANGER}; color: white; border: none; width: 20px; height: 20px; font-size: 12px; cursor: pointer;">×</button></div>`).join('')}
         </div>
         <div style="margin-top: 15px;">
             <input type="range" id="parallax-speed" min="0" max="1" step="0.1" value="${tempParallaxSpeed}" style="width: 100%;">
@@ -5830,7 +5809,7 @@ ${dom.createDialogButtons(theme)}
       grid.innerHTML = images.map((img, index) => `
             <div class="gallery-item" data-index="${index}" style="cursor: pointer; border: 2px solid ${index === currentIndex ? theme.SUCCESS : 'transparent'}; border-radius: 5px; overflow: hidden; position: relative;">
                 <img src="${img}" alt="" style="width: 100%; height: 80px; object-fit: cover;" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjgwIiB2aWV3Qm94PSIwIDAgMTAwIDgwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iODAiIGZpbGw9IiNmZmYiLz48Y2lyY2xlIGN4PSI1MCIgY3k9IjQwIiByPSIyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOTk5OTk5IiBzdHJva2Utd2lkdGg9IjIiLz48bGluZSB4MT0iMzAiIHkxPSI2MCIgeDI9IjcwIiB5Mj0iMjAiIHN0cm9rZT0iIzk5OTk5OSIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9zdmc+';">
-                <button class="remove-btn" data-index="${index}" style="position: absolute; top: 0; right: 0; background: ${theme.DANGER}; color: white; border: none; width: 20px; height: 20px; font-size: 12px; cursor: pointer;">×</button>
+                <button class="remove-btn" data-index="${index}" style="position: absolute; top: 0px; right: 0px; background: ${theme.DANGER}; color: white; border: none; width: 20px; height: 20px; font-size: 12px; cursor: pointer;">×</button>
             </div>
         `).join('');
     }
@@ -6127,7 +6106,7 @@ ${dom.createDialogButtons(theme)}
     border: 1px solid ${theme.BORDER};
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
     max-height: calc(100vh - 48px);
-    overflow-y: auto;
+    overflow-y: auto; scrollbar-width: thin;
     box-sizing: border-box;
     `;
     const isMobileViewport = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
@@ -6587,24 +6566,24 @@ ${dom.createDialogButtons(theme)}
     const resizer = document.createElement('div');
     resizer.setAttribute('data-resizer', 'true');
     resizer.style.cssText = `
-width: ${CONSTANTS.RESIZER_SIZE}px;
-height: ${CONSTANTS.RESIZER_SIZE}px;
-background-color: ${isLightMode ? '#999' : '#666'};
-position: absolute;
-right: 0;
-bottom: 0;
-cursor: se-resize;
-border-radius: 0 0 5px 0;
-display: ${isEditMode ? 'flex' : 'none'};
-align-items: center;
-justify-content: center;
-color: white;
-font-size: 12px;
-transition: background-color 0.2s;
-z-index: 9910;
-will-change: transform;
-transform: translateZ(0);
-`;
+    width: ${CONSTANTS.RESIZER_SIZE}px;
+    height: ${CONSTANTS.RESIZER_SIZE}px;
+    background-color: ${isLightMode ? '#999' : '#666'};
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    cursor: se-resize;
+    border-radius: 0 0 5px 0;
+    display: ${isEditMode ? 'flex' : 'none'};
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+    transition: background-color 0.2s;
+    z-index: 9910;
+    will-change: transform;
+    transform: translateZ(0);
+    `;
     resizer.innerHTML = '⮧';
     const createIndicators = () => {
       const indicators = {
@@ -6614,37 +6593,37 @@ transform: translateZ(0);
       };
       indicators.horizontal.className = 'snap-indicator resize-horizontal-indicator';
       indicators.horizontal.style.cssText = `
-    position: fixed;
-    background-color: #4d90fe;
-    pointer-events: none;
-    z-index: 9999;
-    height: 1px;
-    display: none;
-    transform: translateZ(0);
-    `;
+      position: fixed;
+      background-color: #4d90fe;
+      pointer-events: none;
+      z-index: 9999;
+      height: 1px;
+      display: none;
+      transform: translateZ(0);
+      `;
       indicators.vertical.className = 'snap-indicator resize-vertical-indicator';
       indicators.vertical.style.cssText = `
-    position: fixed;
-    background-color: #4d90fe;
-    pointer-events: none;
-    z-index: 9999;
-    width: 1px;
-    display: none;
-    transform: translateZ(0);
-    `;
+      position: fixed;
+      background-color: #4d90fe;
+      pointer-events: none;
+      z-index: 9999;
+      width: 1px;
+      display: none;
+      transform: translateZ(0);
+      `;
       indicators.tooltip.className = 'dimension-tooltip';
       indicators.tooltip.style.cssText = `
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 12px;
-    pointer-events: none;
-    z-index: 9999;
-    display: none;
-    transform: translateZ(0);
-    `;
+      position: fixed;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      pointer-events: none;
+      z-index: 9999;
+      display: none;
+      transform: translateZ(0);
+      `;
       document.body.appendChild(indicators.horizontal);
       document.body.appendChild(indicators.vertical);
       document.body.appendChild(indicators.tooltip);
@@ -6960,7 +6939,7 @@ transform: translateZ(0);
 
             position: absolute !important;
             top: 50%;
-            left: 0;
+            left: 0px;
             transform: translateY(-50%);
             width: 100% !important;
             height: auto;
