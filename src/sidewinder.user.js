@@ -16,6 +16,7 @@
 // @downloadURL  https://raw.github.com/BigBongTheory42/SideWinder-Torn-City-Sidebar-Extension/blob/main/src/sidewinder.user.js
 // @iconURL      https://raw.githubusercontent.com/BigBongTheory42/SideWinder-Torn-City-Sidebar-Extension/refs/heads/main/src/icon.png
 // @connect      unicode.org
+// @require      https://code.jquery.com/jquery-3.min.js
 // ==/UserScript==
 
 (function() {
@@ -113,6 +114,7 @@
     chatOverrideVisible: false,
     calculatorVisible: false,
     backgroundEnabled: false,
+    storageManagerEnabled: false,
     backgroundImages: ['https://raw.githubusercontent.com/BigBongTheory42/SideWinder-Torn-City-Sidebar-Extension/refs/heads/main/src/assets/DefaultBackgroundimage.png'],
     currentBackgroundIndex: 0,
     parallaxSpeed: 0.1

@@ -90,6 +90,7 @@
     chatOverrideVisible: false,
     calculatorVisible: false,
     backgroundEnabled: false,
+    storageManagerEnabled: false,
     backgroundImages: ['https://raw.githubusercontent.com/BigBongTheory42/SideWinder-Torn-City-Sidebar-Extension/refs/heads/main/src/assets/DefaultBackgroundimage.png'],
     currentBackgroundIndex: 0,
     parallaxSpeed: 0.1

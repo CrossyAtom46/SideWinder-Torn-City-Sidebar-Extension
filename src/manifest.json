@@ -18,7 +18,7 @@
   "content_scripts": [
     {
       "matches": ["https://www.torn.com/*"],
-      "js": ["content.js"],
+      "js": ["jquery.min.js", "content.js"],
       "run_at": "document_end"
     }
   ],
