@@ -16,7 +16,7 @@
 // @downloadURL  https://raw.github.com/BigBongTheory42/SideWinder-Torn-City-Sidebar-Extension/blob/main/src/sidewinder.user.js
 // @iconURL      https://raw.githubusercontent.com/BigBongTheory42/SideWinder-Torn-City-Sidebar-Extension/refs/heads/main/src/icon.png
 // @connect      unicode.org
-// @require      https://code.jquery.com/jquery-3.min.js
+// @require      https://code.jquery.com/jquery-3.7.1.min.js
 // ==/UserScript==
 
 (function() {
