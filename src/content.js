@@ -6,7 +6,7 @@
     SIDEBAR_WIDTH: 475,
     MIN_GROUP_WIDTH: 180,
     MIN_GROUP_HEIGHT: 100,
-    TRADEMARK: 'ð•Šð•šð••ð•–ð•Žð•šð•Ÿð••ð•–ð•£ðŸ”°',
+    TRADEMARK: '𝕊𝕚𝕕𝕖𝕎𝕚𝕟𝕕𝕖𝕣🔰',
     TAGLINES: ["Made with love by Doobiesuckin [3255641]", "Sometimes, It Doobiesuckin", "Hope your Enjoying the SideWinder Script!", "Does anyone actually read these?", "Tokyo Syndicate is the Best Faction", "Detecting Multiple Leviathan Class lifeforms in the Region", "Wanna Sign My Petition?", "Gordon! Get away from the Beam!", "Wait...If I smack Dwayne Johnsons butt, Did I hit rock bottom?", "I wrote this Splash Text on 12-29-24", "A Friend with Weed is a Friend Indeed", "So, You like Jazz?", "Fixing Torn's UI One Script at a Time!", "Caution: May contain nuts.", "All bugs are intentional. Trust the process", "This Sidebar is Fully optimized for staring contests.", "You Should give me a Donation, You know you want to", "Check out Community Crafters on Discord Forums!", "30% Less Likely to scam you over Leslie!", "Did you know? The average cloud weighs about 1 million pounds!", "Did you know? Some snails can sleep for three years straight!", "Did you know? Cheese is the most stolen food in the world!", "Be sure to Like and Review our Forum post!", "-Insert Cool Sidebar Music-", "I'm alive! I'm Ali...ERR0r..Sidewinder Re-Initialized", "A Script Chedburn Himself is Jealous of!", "Woah, Was that Legal?", "Still trying to find the funny", "Did you Take a Xanax Today?", "Remember Bazaars? Those were cool huh", "Keep Grinding those Crimes!", "Why not sign yourself up for a race?", "Your so close to that Gambling win, I can Feel it!", "Voice Mode Enabled, You can now Start Voicing Commands", "Ooh Baby, I'm debugging myself right now.", "Never Gonna Give you up, Never gonna let you down", "1f c0d3 === l1f3) { r3sp4wn();", "I don't even know how to code! -Doobie", "There's no place like 127.0.0.1...", "Happiness is just a hospital trip away.", "One man's trash is another's bazaar stock.", "Sleep is overrated when there's money to be mugged.", "Peace is just the downtime between wars.", "You call it scamming. We call it creative capitalism.", "You can Drag and Resize Groups in Edit Mode", "You can Delete Links, Targets, Groups and more In Delete Mode", "Create New Groups by Clicking the Green + button!", "Use Unicode when Selectiong Emojis for Links", "Find me on Dread! JK", "Struggle is the enemy, Weed is my remedy", "Dirty Hands, Clean Money", "Loading Additional Skill Modules", "Fire Script. No cap, On God - You Probably", "Idle Hands Leave you evil thoughts", "100% American Made", "If Diddy Did Diddle Dudes, How many Dudes Did Diddy Diddle?", "Add a new Link! I can Take it!", "Why'd you just do that?", "You've been Blessed! No OD's For 0.25 seconds! Better Hurry!", "Is this thing on", "01010101 01001110 01100101 01110010 01100100", "Shout out my dog, Torque the Husky", "Find Torn Tutorials on Youtube, Forums, and more!", "That didnt go to plan...", "Grass tastes bad", "Thats what she said", "28:06:42:12", "I have an inferiority complex, but it's not a very good one", "You've gotta hand it to blind prostitutes.", "I havent slept for 4 days! That would be too long.", "I, for one, like Roman numerals.", "Remember, There is no i in denial", "This Script is Open Source on Github!", ],
     STATE_KEYS: {
       SIDEBAR_POSITION: 'sidebarPosition',
@@ -557,7 +557,7 @@
       const resizer = document.createElement('div');
       resizer.setAttribute('data-resizer', 'true');
       resizer.style.cssText = `width: 20px; height: 20px; background-color: ${isLightMode ? '#999' : '#666'}; position: absolute; right: 0px; bottom: 0px; cursor: se-resize; border-radius: 0 0 5px 0; display: ${isEditMode ? 'flex' : 'none'}; align-items: center; justify-content: center; color: white; font-size: 12px; transition: background-color 0.2s; z-index: 9910;`;
-      resizer.innerHTML = 'â®§';
+      resizer.innerHTML = '⮧';
 
       function handleResize(mouseEvent) {
         mouseEvent.preventDefault();
@@ -668,15 +668,15 @@
             style="margin-top: 5px; font-size: 18px; border: 1px solid ${theme.BORDER};
             border-radius: 5px; background: ${theme.BG}; display: none;">
             <div class="emoji-categories" style="display: flex; border-bottom: 1px solid ${theme.BORDER}; padding: 5px;">
-            <button type="button" class="category-btn active" data-category="smileys" style="background: none; border: none; cursor: pointer; padding: 5px; opacity: 0.7;">ðŸ˜Š</button>
-            <button type="button" class="category-btn" data-category="gestures" style="background: none; border: none; cursor: pointer; padding: 5px; opacity: 0.7;">ðŸ‘‹</button>
-            <button type="button" class="category-btn" data-category="people" style="background: none; border: none; cursor: pointer; padding: 5px; opacity: 0.7;">ðŸ‘¤</button>
-            <button type="button" class="category-btn" data-category="nature" style="background: none; border: none; cursor: pointer; padding: 5px; opacity: 0.7;">ðŸŒ¿</button>
-            <button type="button" class="category-btn" data-category="food" style="background: none; border: none; cursor: pointer; padding: 5px; opacity: 0.7;">ðŸ”</button>
-            <button type="button" class="category-btn" data-category="activities" style="background: none; border: none; cursor: pointer; padding: 5px; opacity: 0.7;">âš½</button>
-            <button type="button" class="category-btn" data-category="objects" style="background: none; border: none; cursor: pointer; padding: 5px; opacity: 0.7;">ðŸ’¡</button>
-            <button type="button" class="category-btn" data-category="symbols" style="background: none; border: none; cursor: pointer; padding: 5px; opacity: 0.7;">â¤ï¸</button>
-            <button type="button" class="category-btn" data-category="travel" style="background: none; border: none; cursor: pointer; padding: 5px; opacity: 0.7;">ðŸŒ</button>
+            <button type="button" class="category-btn active" data-category="smileys" style="background: none; border: none; cursor: pointer; padding: 5px; opacity: 0.7;">😊</button>
+            <button type="button" class="category-btn" data-category="gestures" style="background: none; border: none; cursor: pointer; padding: 5px; opacity: 0.7;">👋</button>
+            <button type="button" class="category-btn" data-category="people" style="background: none; border: none; cursor: pointer; padding: 5px; opacity: 0.7;">👤</button>
+            <button type="button" class="category-btn" data-category="nature" style="background: none; border: none; cursor: pointer; padding: 5px; opacity: 0.7;">🌿</button>
+            <button type="button" class="category-btn" data-category="food" style="background: none; border: none; cursor: pointer; padding: 5px; opacity: 0.7;">🍔</button>
+            <button type="button" class="category-btn" data-category="activities" style="background: none; border: none; cursor: pointer; padding: 5px; opacity: 0.7;">⚽</button>
+            <button type="button" class="category-btn" data-category="objects" style="background: none; border: none; cursor: pointer; padding: 5px; opacity: 0.7;">💡</button>
+            <button type="button" class="category-btn" data-category="symbols" style="background: none; border: none; cursor: pointer; padding: 5px; opacity: 0.7;">❤️</button>
+            <button type="button" class="category-btn" data-category="travel" style="background: none; border: none; cursor: pointer; padding: 5px; opacity: 0.7;">🌍</button>
             </div>
             <div class="emoji-container" style="max-height: 200px; overflow-y: auto; scrollbar-width: thin; padding: 10px;"></div>
             </div>
@@ -822,7 +822,7 @@
       });
       Object.keys(emojiCategories).forEach(category => {
         if (!emojiCategories[category].emojis?.length) {
-          emojiCategories[category].emojis = ['â“'];
+          emojiCategories[category].emojis = ['❓'];
         }
       });
       let emojiContainer = container.querySelector('.emoji-container');
@@ -1016,31 +1016,31 @@
       if (!categoryButtons.length) {
         const categories = [{
           id: 'smileys',
-          icon: 'ðŸ˜Š'
+          icon: '😊'
         }, {
           id: 'gestures',
-          icon: 'ðŸ‘‹'
+          icon: '👋'
         }, {
           id: 'people',
-          icon: 'ðŸ‘¤'
+          icon: '👤'
         }, {
           id: 'nature',
-          icon: 'ðŸ±'
+          icon: '🐱'
         }, {
           id: 'food',
-          icon: 'ðŸ”'
+          icon: '🍔'
         }, {
           id: 'activities',
-          icon: 'âš½'
+          icon: '⚽'
         }, {
           id: 'travel',
-          icon: 'ðŸš—'
+          icon: '🚗'
         }, {
           id: 'objects',
-          icon: 'ðŸ’¡'
+          icon: '💡'
         }, {
           id: 'symbols',
-          icon: 'â¤ï¸'
+          icon: '❤️'
         }];
         categories.forEach(cat => {
           const btn = document.createElement('button');
@@ -1100,7 +1100,7 @@
         defaultCategoryBtn.style.transform = 'scale(1.15)';
       }
     } catch (err) {
-      container.textContent = "âš ï¸ Failed to load emojis";
+      container.textContent = "⚠️ Failed to load emojis";
       console.error("Emoji fetch failed:", err);
     }
   }
@@ -1193,7 +1193,7 @@
             </div>
             <div style="margin-bottom: 10px;">
             <label style="color: ${theme.TEXT}; display: block; margin-bottom: 5px;">Emoji:</label>
-            <input type="text" id="linkEmoji_${dialogId}" style="width: 100%; padding: 5px; background: ${theme.BG}; border: 1px solid ${theme.BORDER}; color: ${theme.TEXT}; border-radius: 3px; margin-bottom: 5px;" placeholder="ðŸ”—">
+            <input type="text" id="linkEmoji_${dialogId}" style="width: 100%; padding: 5px; background: ${theme.BG}; border: 1px solid ${theme.BORDER}; color: ${theme.TEXT}; border-radius: 3px; margin-bottom: 5px;" placeholder="🔗">
         ${dom.createEmojiButtons(theme)}
         </div>
     ${dom.createDialogButtons(theme)}
@@ -1214,7 +1214,7 @@
             state.groups[groupIndex].links.push({
               name,
               url,
-              emoji: emoji || 'ðŸ”—'
+              emoji: emoji || '🔗'
             });
             utils.saveState(`${CONSTANTS.STATE_KEYS.GROUPS}_${state.currentPage}`, state.groups);
             refreshSidebar();
@@ -1867,7 +1867,7 @@
       container.appendChild(tooltip);
       const currentPageCircle = document.createElement('div');
       currentPageCircle.style.cssText = `width: 30px; height: 30px; border-radius: 50%; background-color: ${theme.BottomButtonBG}; color: ${theme.TEXT}; display: flex; justify-content: center; align-items: center; cursor: pointer; font-weight: bold; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); transition: all 0.2s ease; position: relative;`;
-      currentPageCircle.innerHTML = 'ðŸ“‘';
+      currentPageCircle.innerHTML = '📑';
       const img = document.createElement('img');
       img.src = chrome.runtime.getURL('assets/pages.svg');
       img.alt = 'Pages';
@@ -2285,7 +2285,7 @@
         text: '9',
         type: 'number'
       }, {
-        text: 'Ã·',
+        text: '÷',
         type: 'operator',
         value: '/'
       }, {
@@ -2298,7 +2298,7 @@
         text: '6',
         type: 'number'
       }, {
-        text: 'Ã—',
+        text: '×',
         type: 'operator',
         value: '*'
       }, {
@@ -2412,11 +2412,11 @@
                   result = prev - current;
                   break;
                 case '*':
-                case 'Ã—':
+                case '×':
                   result = prev * current;
                   break;
                 case '/':
-                case 'Ã·':
+                case '÷':
                   if (current === 0) {
                     result = 'Error';
                   } else {
@@ -2460,10 +2460,10 @@
           const opBtn = Array.from(keypad.children).find(btn => btn.textContent === key);
           if (opBtn) opBtn.click();
         } else if (key === '*') {
-          const multBtn = Array.from(keypad.children).find(btn => btn.textContent === 'Ã—');
+          const multBtn = Array.from(keypad.children).find(btn => btn.textContent === '×');
           if (multBtn) multBtn.click();
         } else if (key === '/') {
-          const divBtn = Array.from(keypad.children).find(btn => btn.textContent === 'Ã·');
+          const divBtn = Array.from(keypad.children).find(btn => btn.textContent === '÷');
           if (divBtn) divBtn.click();
         } else if (key === 'Enter' || key === '=') {
           const equalsBtn = Array.from(keypad.children).find(btn => btn.textContent === '=');
@@ -2969,7 +2969,7 @@
     </div>
     <div style="margin-bottom: 10px;">
     <label style="color: ${theme.TEXT}; display: block; margin-bottom: 5px;">Emoji:</label>
-    <input type="text" id="itemEmoji_${dialogId}" style="width: 100%; padding: 5px; background: ${theme.BG}; border: 1px solid ${theme.BORDER}; color: ${theme.TEXT}; border-radius: 3px; margin-bottom: 5px;" placeholder="âœ…">
+    <input type="text" id="itemEmoji_${dialogId}" style="width: 100%; padding: 5px; background: ${theme.BG}; border: 1px solid ${theme.BORDER}; color: ${theme.TEXT}; border-radius: 3px; margin-bottom: 5px;" placeholder="✅">
 ${dom.createEmojiButtons(theme)}
 </div>
 ${dom.createDialogButtons(theme)}
@@ -2984,7 +2984,7 @@ ${dom.createDialogButtons(theme)}
           e.preventDefault();
           const itemName = document.getElementById(`itemName_${dialogId}`).value.trim();
           const itemUrl = document.getElementById(`itemUrl_${dialogId}`).value.trim();
-          const itemEmoji = document.getElementById(`itemEmoji_${dialogId}`).value.trim() || 'âœ…';
+          const itemEmoji = document.getElementById(`itemEmoji_${dialogId}`).value.trim() || '✅';
           if (!itemName) {
             alert('Please enter a task name');
             return;
@@ -3751,7 +3751,7 @@ ${dom.createDialogButtons(theme)}
     linkDiv.className = 'no-drag';
     linkDiv.style.cssText = `background-color: ${secondaryColor}; color: ${state.isLightMode ? '#0066cc' : '#8cb3d9'}; border: 1px solid ${theme.BORDER}; padding: 4px 10px; cursor: pointer; border-radius: 3px; display: flex; justify-content: space-between; align-items: center; min-width: 120px;`;
     const linkText = document.createElement('span');
-    linkText.textContent = `${link.emoji || 'ðŸ”—'} ${link.name}`;
+    linkText.textContent = `${link.emoji || '🔗'} ${link.name}`;
     linkDiv.appendChild(linkText);
     const buttonWrapper = document.createElement('div');
     buttonWrapper.style.cssText = 'display: flex; gap: 5px; align-items: center;';
@@ -3782,12 +3782,12 @@ ${dom.createDialogButtons(theme)}
     const container = document.createElement('div');
     container.style.cssText = `display: flex; gap: 3px; margin-left: 5px;`;
     if (linkIndex > 0) {
-      container.appendChild(createMoveButton('â†‘', () => {
+      container.appendChild(createMoveButton('↑', () => {
         moveLink(groupIndex, linkIndex, linkIndex - 1);
       }, theme));
     }
     if (linkIndex < totalLinks - 1) {
-      container.appendChild(createMoveButton('â†“', () => {
+      container.appendChild(createMoveButton('↓', () => {
         moveLink(groupIndex, linkIndex, linkIndex + 1);
       }, theme));
     }
@@ -4139,7 +4139,7 @@ ${dom.createDialogButtons(theme)}
   function createTargetElement(target, list, listIndex, targetIndex, theme, secondaryColor) {
     const targetDiv = document.createElement('div');
     targetDiv.style.cssText = `background-color: ${secondaryColor}; padding: 5px 12px; border-radius: 3px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; position: relative; min-width: 130px;`;
-    targetDiv.title = 'Attack âš”ï¸';
+    targetDiv.title = 'Attack ⚔️';
     targetDiv.addEventListener('click', (e) => {
       if (!state.isDeleteMode && !e.target.closest('.delete-button')) {
         window.location.href = `${list.attackUrl}${target.id}`;
@@ -4275,7 +4275,7 @@ ${dom.createDialogButtons(theme)}
     container.style.cssText = 'margin-top: 10px;';
     const header = document.createElement('div');
     header.style.cssText = `color: ${theme.TEXT}; font-size: 14px; margin-bottom: 5px; cursor: pointer; display: flex; align-items: center;`;
-    header.innerHTML = 'â–¼ Completed Items (' + list.completedItems.length + ')';
+    header.innerHTML = '▼ Completed Items (' + list.completedItems.length + ')';
     const content = document.createElement('div');
     content.style.cssText = 'display: none; padding: 5px; background-color: ' + secondaryColor + '; border-radius: 3px;';
     list.completedItems.forEach((item, index) => {
@@ -4297,7 +4297,7 @@ ${dom.createDialogButtons(theme)}
         }
       });
       const itemText = document.createElement('span');
-      itemText.textContent = `${item.emoji || 'âœ…'} ${item.name}`;
+      itemText.textContent = `${item.emoji || '✅'} ${item.name}`;
       itemText.style.cssText = `color: ${theme.TEXT}; text-decoration: line-through; opacity: 0.7; flex-grow: 1;`;
       itemDiv.appendChild(checkbox);
       itemDiv.appendChild(itemText);
@@ -4306,10 +4306,10 @@ ${dom.createDialogButtons(theme)}
     header.addEventListener('click', () => {
       if (content.style.display === 'none') {
         content.style.display = 'block';
-        header.innerHTML = 'â–² Completed Items (' + list.completedItems.length + ')';
+        header.innerHTML = '▲ Completed Items (' + list.completedItems.length + ')';
       } else {
         content.style.display = 'none';
-        header.innerHTML = 'â–¼ Completed Items (' + list.completedItems.length + ')';
+        header.innerHTML = '▼ Completed Items (' + list.completedItems.length + ')';
       }
     });
     container.appendChild(header);
@@ -4369,7 +4369,7 @@ ${dom.createDialogButtons(theme)}
       }
     });
     const itemText = document.createElement('span');
-    itemText.textContent = `${item.emoji || 'âœ…'} ${item.name}`;
+    itemText.textContent = `${item.emoji || '✅'} ${item.name}`;
     itemText.style.cssText = `color: ${theme.TEXT}; flex-grow: 1; text-decoration: ${item.checked ? 'line-through' : 'none'}; opacity: ${item.checked ? '0.5' : '1'}; cursor: ${item.url ? 'pointer' : 'default'};`;
     if (item.url) {
       itemText.addEventListener('click', () => {
@@ -4382,7 +4382,7 @@ ${dom.createDialogButtons(theme)}
       const moveButtons = document.createElement('div');
       moveButtons.style.cssText = 'display: flex; gap: 3px;';
       if (itemIndex > 0) {
-        const upButton = createMoveButton('â†‘', () => {
+        const upButton = createMoveButton('↑', () => {
           const temp = list.items[itemIndex];
           list.items[itemIndex] = list.items[itemIndex - 1];
           list.items[itemIndex - 1] = temp;
@@ -4392,7 +4392,7 @@ ${dom.createDialogButtons(theme)}
         moveButtons.appendChild(upButton);
       }
       if (itemIndex < list.items.length - 1) {
-        const downButton = createMoveButton('â†“', () => {
+        const downButton = createMoveButton('↓', () => {
           const temp = list.items[itemIndex];
           list.items[itemIndex] = list.items[itemIndex + 1];
           list.items[itemIndex + 1] = temp;
@@ -4463,7 +4463,7 @@ ${dom.createDialogButtons(theme)}
     addLoanButton.appendChild(img);
     buttonContainer.appendChild(addLoanButton);
     if (state.isEditMode) {
-      const colorButton = dom.createAddButton(theme, 'ðŸŽ¨', async () => {
+      const colorButton = dom.createAddButton(theme, '🎨', async () => {
         const theme = utils.getTheme();
         const result = await openColorPicker(state.loanTracker, undefined, theme);
         if (result) {
@@ -4524,13 +4524,13 @@ ${dom.createDialogButtons(theme)}
     entryDiv.appendChild(headerDiv);
     if (entry.dueDate) {
       const dueDiv = document.createElement('div');
-      dueDiv.textContent = `ðŸ“… Due: ${utils.formatDate(entry.dueDate)}`;
+      dueDiv.textContent = `📅 Due: ${utils.formatDate(entry.dueDate)}`;
       dueDiv.style.cssText = `color: ${utils.getDueDateColor(entry, theme)}; font-size: 13px; ${utils.isOverdue(entry) ? 'font-weight: bold;' : ''}`;
       entryDiv.appendChild(dueDiv);
     }
     if (entry.notes) {
       const notesDiv = document.createElement('div');
-      notesDiv.textContent = `ðŸ“ ${entry.notes}`;
+      notesDiv.textContent = `📝 ${entry.notes}`;
       notesDiv.style.cssText = `color: ${theme.TEXT}; font-size: 13px; font-style: italic;`;
       entryDiv.appendChild(notesDiv);
     }
@@ -4624,7 +4624,7 @@ ${dom.createDialogButtons(theme)}
     addAuctionButton.appendChild(img);
     buttonContainer.appendChild(addAuctionButton);
     if (state.isEditMode) {
-      const colorButton = dom.createAddButton(theme, 'ðŸŽ¨', async () => {
+      const colorButton = dom.createAddButton(theme, '🎨', async () => {
         const theme = utils.getTheme();
         const result = await openColorPicker(state.auctionTracker, undefined, theme);
         if (result) {
@@ -4785,7 +4785,7 @@ ${dom.createDialogButtons(theme)}
     const buttonContainer = document.createElement('div');
     buttonContainer.style.cssText = 'display: flex; gap: 5px; align-items: center;';
     if (state.isEditMode) {
-      const colorButton = dom.createAddButton(theme, 'ðŸŽ¨', async () => {
+      const colorButton = dom.createAddButton(theme, '🎨', async () => {
         const theme = utils.getTheme();
         const result = await openColorPicker(group, index, theme);
         if (result) {
@@ -5287,54 +5287,54 @@ ${dom.createDialogButtons(theme)}
   }
 
   function exportAllData() {
-	const data = {
-		pageData: [{}, {}, {}],
-		isLightMode: state.isLightMode,
-		isSidebarRight: state.isSidebarRight,
-		legibleNamesEnabled: state.legibleNamesEnabled,
-		storageManagerEnabled: state.storageManagerEnabled,
-		currentPage: state.currentPage,
-		backgroundEnabled: state.backgroundEnabled,
-		backgroundImages: state.backgroundImages,
-		currentBackgroundIndex: state.currentBackgroundIndex,
-		parallaxSpeed: state.parallaxSpeed,
-		isAutoWidth: state.isAutoWidth,
-		clockVisible: state.clockVisible,
-		chatOverrideVisible: state.chatOverrideVisible
-	};
-	for (let i = 0; i < 3; i++) {
-		const groupsState = localStorage.getItem(`${CONSTANTS.STATE_KEYS.GROUPS}_${i}`);
-		if (groupsState && groupsState !== "null") data.pageData[i].groups = JSON.parse(groupsState);
-		const notepadsState = localStorage.getItem(`${CONSTANTS.STATE_KEYS.NOTEPADS}_${i}`);
-		if (notepadsState && notepadsState !== "null") data.pageData[i].notepads = JSON.parse(notepadsState);
-		const attackListsState = localStorage.getItem(`${CONSTANTS.STATE_KEYS.ATTACK_LISTS}_${i}`);
-		if (attackListsState && attackListsState !== "null") data.pageData[i].attackLists = JSON.parse(attackListsState);
-		const todoListsState = localStorage.getItem(`${CONSTANTS.STATE_KEYS.TODO_LISTS}_${i}`);
-		if (todoListsState && todoListsState !== "null") data.pageData[i].todoLists = JSON.parse(todoListsState);
-		const loanTrackerState = localStorage.getItem(`${CONSTANTS.STATE_KEYS.LOAN_TRACKER}_${i}`);
-		if (loanTrackerState && loanTrackerState !== "null") data.pageData[i].loanTracker = JSON.parse(loanTrackerState);
-		const auctionTrackerState = localStorage.getItem(`${CONSTANTS.STATE_KEYS.AUCTION_TRACKER}_${i}`);
-		if (auctionTrackerState && auctionTrackerState !== "null") data.pageData[i].auctionTracker = JSON.parse(auctionTrackerState);
-		const countdownGroupsState = localStorage.getItem(`${CONSTANTS.STATE_KEYS.COUNTDOWN_GROUPS}_${i}`);
-		if (countdownGroupsState && countdownGroupsState !== "null") data.pageData[i].countdownGroups = JSON.parse(countdownGroupsState);
-		const manualCountdownGroupsState = localStorage.getItem(`${CONSTANTS.STATE_KEYS.MANUAL_COUNTDOWN_GROUPS}_${i}`);
-		if (manualCountdownGroupsState && manualCountdownGroupsState !== "null") data.pageData[i].manualCountdownGroups = JSON.parse(manualCountdownGroupsState);
-		const clocksState = localStorage.getItem(`${CONSTANTS.STATE_KEYS.CLOCKS}_${i}`);
-		if (clocksState && clocksState !== "null") data.pageData[i].clocks = JSON.parse(clocksState);
-	}
-	const blob = new Blob([JSON.stringify(data, null, 2)], {
-		type: 'application/json'
-	});
-	const url = URL.createObjectURL(blob);
-	const a = document.createElement('a');
-	a.href = url;
-	a.download = 'sidewinder_backup.json';
-	document.body.appendChild(a);
-	a.click();
-	document.body.removeChild(a);
-	URL.revokeObjectURL(url);
-	utils.showToast('Data exported successfully', 'success');
-   }
+    const data = {
+      pageData: [{}, {}, {}],
+      isLightMode: state.isLightMode,
+      isSidebarRight: state.isSidebarRight,
+      legibleNamesEnabled: state.legibleNamesEnabled,
+      storageManagerEnabled: state.storageManagerEnabled,
+      currentPage: state.currentPage,
+      backgroundEnabled: state.backgroundEnabled,
+      backgroundImages: state.backgroundImages,
+      currentBackgroundIndex: state.currentBackgroundIndex,
+      parallaxSpeed: state.parallaxSpeed,
+      isAutoWidth: state.isAutoWidth,
+      clockVisible: state.clockVisible,
+      chatOverrideVisible: state.chatOverrideVisible
+    };
+    for (let i = 0; i < 3; i++) {
+      const groupsState = localStorage.getItem(`${CONSTANTS.STATE_KEYS.GROUPS}_${i}`);
+      if (groupsState && groupsState !== "null") data.pageData[i].groups = JSON.parse(groupsState);
+      const notepadsState = localStorage.getItem(`${CONSTANTS.STATE_KEYS.NOTEPADS}_${i}`);
+      if (notepadsState && notepadsState !== "null") data.pageData[i].notepads = JSON.parse(notepadsState);
+      const attackListsState = localStorage.getItem(`${CONSTANTS.STATE_KEYS.ATTACK_LISTS}_${i}`);
+      if (attackListsState && attackListsState !== "null") data.pageData[i].attackLists = JSON.parse(attackListsState);
+      const todoListsState = localStorage.getItem(`${CONSTANTS.STATE_KEYS.TODO_LISTS}_${i}`);
+      if (todoListsState && todoListsState !== "null") data.pageData[i].todoLists = JSON.parse(todoListsState);
+      const loanTrackerState = localStorage.getItem(`${CONSTANTS.STATE_KEYS.LOAN_TRACKER}_${i}`);
+      if (loanTrackerState && loanTrackerState !== "null") data.pageData[i].loanTracker = JSON.parse(loanTrackerState);
+      const auctionTrackerState = localStorage.getItem(`${CONSTANTS.STATE_KEYS.AUCTION_TRACKER}_${i}`);
+      if (auctionTrackerState && auctionTrackerState !== "null") data.pageData[i].auctionTracker = JSON.parse(auctionTrackerState);
+      const countdownGroupsState = localStorage.getItem(`${CONSTANTS.STATE_KEYS.COUNTDOWN_GROUPS}_${i}`);
+      if (countdownGroupsState && countdownGroupsState !== "null") data.pageData[i].countdownGroups = JSON.parse(countdownGroupsState);
+      const manualCountdownGroupsState = localStorage.getItem(`${CONSTANTS.STATE_KEYS.MANUAL_COUNTDOWN_GROUPS}_${i}`);
+      if (manualCountdownGroupsState && manualCountdownGroupsState !== "null") data.pageData[i].manualCountdownGroups = JSON.parse(manualCountdownGroupsState);
+      const clocksState = localStorage.getItem(`${CONSTANTS.STATE_KEYS.CLOCKS}_${i}`);
+      if (clocksState && clocksState !== "null") data.pageData[i].clocks = JSON.parse(clocksState);
+    }
+    const blob = new Blob([JSON.stringify(data, null, 2)], {
+      type: 'application/json'
+    });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'sidewinder_backup.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    utils.showToast('Data exported successfully', 'success');
+     }
 
   function addDebugManager() {
     const pageSelector = document.getElementById('page-selector');
@@ -5417,92 +5417,92 @@ ${dom.createDialogButtons(theme)}
   }
 
   function importAllData() {
-	const input = document.createElement('input');
-	input.type = 'file';
-	input.accept = '.json';
-	input.onchange = (e) => {
-		const file = e.target.files[0];
-		if (!file) return;
-		const reader = new FileReader();
-		reader.onload = (event) => {
-			try {
-				const data = JSON.parse(event.target.result);
-				if (data.pageData !== undefined && Array.isArray(data.pageData)) {
-					for (let i = 0; i < Math.min(data.pageData.length, 3); i++) {
-						if (data.pageData[i]) {
-							if (data.pageData[i].groups !== undefined) utils.saveState(`${CONSTANTS.STATE_KEYS.GROUPS}_${i}`, data.pageData[i].groups);
-							if (data.pageData[i].notepads !== undefined) utils.saveState(`${CONSTANTS.STATE_KEYS.NOTEPADS}_${i}`, data.pageData[i].notepads);
-							if (data.pageData[i].attackLists !== undefined) utils.saveState(`${CONSTANTS.STATE_KEYS.ATTACK_LISTS}_${i}`, data.pageData[i].attackLists);
-							if (data.pageData[i].todoLists !== undefined) utils.saveState(`${CONSTANTS.STATE_KEYS.TODO_LISTS}_${i}`, data.pageData[i].todoLists);
-							if (data.pageData[i].loanTracker !== undefined) utils.saveState(`${CONSTANTS.STATE_KEYS.LOAN_TRACKER}_${i}`, data.pageData[i].loanTracker);
-							if (data.pageData[i].auctionTracker !== undefined) utils.saveState(`${CONSTANTS.STATE_KEYS.AUCTION_TRACKER}_${i}`, data.pageData[i].auctionTracker);
-							if (data.pageData[i].countdownGroups !== undefined) utils.saveState(`${CONSTANTS.STATE_KEYS.COUNTDOWN_GROUPS}_${i}`, data.pageData[i].countdownGroups);
-							if (data.pageData[i].manualCountdownGroups !== undefined) utils.saveState(`${CONSTANTS.STATE_KEYS.MANUAL_COUNTDOWN_GROUPS}_${i}`, data.pageData[i].manualCountdownGroups);
-							if (data.pageData[i].clocks !== undefined) utils.saveState(`${CONSTANTS.STATE_KEYS.CLOCKS}_${i}`, data.pageData[i].clocks);
-						}
-					}
-					if (data.pageData[data.currentPage]) {
-						state.groups = data.pageData[data.currentPage].groups || [];
-						state.notepads = data.pageData[data.currentPage].notepads || [];
-						state.attackLists = data.pageData[data.currentPage].attackLists || [];
-						state.todoLists = data.pageData[data.currentPage].todoLists || [];
-						state.loanTracker = data.pageData[data.currentPage].loanTracker || { entries: [] };
-						state.auctionTracker = data.pageData[data.currentPage].auctionTracker || { auctions: [] };
-						state.countdownGroups = data.pageData[data.currentPage].countdownGroups || [];
-						state.manualCountdownGroups = data.pageData[data.currentPage].manualCountdownGroups || [];
-						state.clocks = data.pageData[data.currentPage].clocks || [];
-					}
-				}
-				if (data.isLightMode !== undefined) state.isLightMode = data.isLightMode;
-				if (data.isSidebarRight !== undefined) state.isSidebarRight = data.isSidebarRight;
-				if (data.legibleNamesEnabled !== undefined) state.legibleNamesEnabled = data.legibleNamesEnabled;
-				if (data.storageManagerEnabled !== undefined) state.storageManagerEnabled = data.storageManagerEnabled;
-				if (data.currentPage !== undefined) state.currentPage = data.currentPage;
-				if (data.backgroundEnabled !== undefined) state.backgroundEnabled = data.backgroundEnabled;
-				if (data.backgroundImages !== undefined) state.backgroundImages = data.backgroundImages;
-				if (data.currentBackgroundIndex !== undefined) state.currentBackgroundIndex = data.currentBackgroundIndex;
-				if (data.parallaxSpeed !== undefined) state.parallaxSpeed = data.parallaxSpeed;
-				if (data.isAutoWidth !== undefined) state.isAutoWidth = data.isAutoWidth;
-				if (data.clockVisible !== undefined) state.clockVisible = data.clockVisible;
-				if (data.chatOverrideVisible !== undefined) state.chatOverrideVisible = data.chatOverrideVisible;
-				utils.saveState(`${CONSTANTS.STATE_KEYS.GROUPS}_${state.currentPage}`, state.groups);
-				utils.saveState(`${CONSTANTS.STATE_KEYS.NOTEPADS}_${state.currentPage}`, state.notepads);
-				utils.saveState(`${CONSTANTS.STATE_KEYS.ATTACK_LISTS}_${state.currentPage}`, state.attackLists);
-				utils.saveState(`${CONSTANTS.STATE_KEYS.TODO_LISTS}_${state.currentPage}`, state.todoLists);
-				utils.saveState(`${CONSTANTS.STATE_KEYS.LOAN_TRACKER}_${state.currentPage}`, state.loanTracker);
-				utils.saveState(`${CONSTANTS.STATE_KEYS.AUCTION_TRACKER}_${state.currentPage}`, state.loanTracker);
-				utils.saveState(`${CONSTANTS.STATE_KEYS.COUNTDOWN_GROUPS}_${state.currentPage}`, state.countdownGroups);
-				utils.saveState(`${CONSTANTS.STATE_KEYS.MANUAL_COUNTDOWN_GROUPS}_${state.currentPage}`, state.manualCountdownGroups);
-				utils.saveState(`${CONSTANTS.STATE_KEYS.CLOCKS}_${state.currentPage}`, state.clocks);
-				utils.saveState(CONSTANTS.STATE_KEYS.LIGHT_MODE, state.isLightMode);
-				utils.saveState(CONSTANTS.STATE_KEYS.SIDEBAR_POSITION, state.isSidebarRight);
-				utils.saveState(CONSTANTS.STATE_KEYS.LEGIBLE_NAMES_ENABLED, state.legibleNamesEnabled);
-				utils.saveState(CONSTANTS.STATE_KEYS.STORAGE_MANAGER_ENABLED, state.storageManagerEnabled);
-				utils.saveState(CONSTANTS.STATE_KEYS.CURRENT_PAGE, state.currentPage);
-				utils.saveState(CONSTANTS.STATE_KEYS.PAGE_DATA, state.pageData);
-				utils.saveState(CONSTANTS.BACKGROUND_ENABLED_KEY, state.backgroundEnabled);
-				utils.saveState(CONSTANTS.BACKGROUND_IMAGES_KEY, state.backgroundImages);
-				utils.saveState(CONSTANTS.BACKGROUND_KEY, state.currentBackgroundIndex);
-				utils.saveState(CONSTANTS.PARALLAX_SPEED_KEY, state.parallaxSpeed);
-				localStorage.setItem('sidebarAutoWidth', state.isAutoWidth ? '1' : '0');
-				if (state.backgroundEnabled) {
-					try {
-						applyBackground();
-					} catch (e) {
-						console.error('Error applying background after import:', e);
-					}
-				}
-				refreshSidebar();
-				utils.showToast('Data imported successfully', 'success');
-			} catch (error) {
-				console.error('Import error:', error);
-				utils.showToast('Error importing data', 'error');
-			}
-		};
-		reader.readAsText(file);
-	};
-	input.click();
-   }
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = '.json';
+    input.onchange = (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        try {
+          const data = JSON.parse(event.target.result);
+          if (data.pageData !== undefined && Array.isArray(data.pageData)) {
+            for (let i = 0; i < Math.min(data.pageData.length, 3); i++) {
+              if (data.pageData[i]) {
+                if (data.pageData[i].groups !== undefined) utils.saveState(`${CONSTANTS.STATE_KEYS.GROUPS}_${i}`, data.pageData[i].groups);
+                if (data.pageData[i].notepads !== undefined) utils.saveState(`${CONSTANTS.STATE_KEYS.NOTEPADS}_${i}`, data.pageData[i].notepads);
+                if (data.pageData[i].attackLists !== undefined) utils.saveState(`${CONSTANTS.STATE_KEYS.ATTACK_LISTS}_${i}`, data.pageData[i].attackLists);
+                if (data.pageData[i].todoLists !== undefined) utils.saveState(`${CONSTANTS.STATE_KEYS.TODO_LISTS}_${i}`, data.pageData[i].todoLists);
+                if (data.pageData[i].loanTracker !== undefined) utils.saveState(`${CONSTANTS.STATE_KEYS.LOAN_TRACKER}_${i}`, data.pageData[i].loanTracker);
+                if (data.pageData[i].auctionTracker !== undefined) utils.saveState(`${CONSTANTS.STATE_KEYS.AUCTION_TRACKER}_${i}`, data.pageData[i].auctionTracker);
+                if (data.pageData[i].countdownGroups !== undefined) utils.saveState(`${CONSTANTS.STATE_KEYS.COUNTDOWN_GROUPS}_${i}`, data.pageData[i].countdownGroups);
+                if (data.pageData[i].manualCountdownGroups !== undefined) utils.saveState(`${CONSTANTS.STATE_KEYS.MANUAL_COUNTDOWN_GROUPS}_${i}`, data.pageData[i].manualCountdownGroups);
+                if (data.pageData[i].clocks !== undefined) utils.saveState(`${CONSTANTS.STATE_KEYS.CLOCKS}_${i}`, data.pageData[i].clocks);
+              }
+            }
+            if (data.pageData[data.currentPage]) {
+              state.groups = data.pageData[data.currentPage].groups || [];
+              state.notepads = data.pageData[data.currentPage].notepads || [];
+              state.attackLists = data.pageData[data.currentPage].attackLists || [];
+              state.todoLists = data.pageData[data.currentPage].todoLists || [];
+              state.loanTracker = data.pageData[data.currentPage].loanTracker || { entries: [] };
+              state.auctionTracker = data.pageData[data.currentPage].auctionTracker || { auctions: [] };
+              state.countdownGroups = data.pageData[data.currentPage].countdownGroups || [];
+              state.manualCountdownGroups = data.pageData[data.currentPage].manualCountdownGroups || [];
+              state.clocks = data.pageData[data.currentPage].clocks || [];
+            }
+          }
+          if (data.isLightMode !== undefined) state.isLightMode = data.isLightMode;
+          if (data.isSidebarRight !== undefined) state.isSidebarRight = data.isSidebarRight;
+          if (data.legibleNamesEnabled !== undefined) state.legibleNamesEnabled = data.legibleNamesEnabled;
+          if (data.storageManagerEnabled !== undefined) state.storageManagerEnabled = data.storageManagerEnabled;
+          if (data.currentPage !== undefined) state.currentPage = data.currentPage;
+          if (data.backgroundEnabled !== undefined) state.backgroundEnabled = data.backgroundEnabled;
+          if (data.backgroundImages !== undefined) state.backgroundImages = data.backgroundImages;
+          if (data.currentBackgroundIndex !== undefined) state.currentBackgroundIndex = data.currentBackgroundIndex;
+          if (data.parallaxSpeed !== undefined) state.parallaxSpeed = data.parallaxSpeed;
+          if (data.isAutoWidth !== undefined) state.isAutoWidth = data.isAutoWidth;
+          if (data.clockVisible !== undefined) state.clockVisible = data.clockVisible;
+          if (data.chatOverrideVisible !== undefined) state.chatOverrideVisible = data.chatOverrideVisible;
+          utils.saveState(`${CONSTANTS.STATE_KEYS.GROUPS}_${state.currentPage}`, state.groups);
+          utils.saveState(`${CONSTANTS.STATE_KEYS.NOTEPADS}_${state.currentPage}`, state.notepads);
+          utils.saveState(`${CONSTANTS.STATE_KEYS.ATTACK_LISTS}_${state.currentPage}`, state.attackLists);
+          utils.saveState(`${CONSTANTS.STATE_KEYS.TODO_LISTS}_${state.currentPage}`, state.todoLists);
+          utils.saveState(`${CONSTANTS.STATE_KEYS.LOAN_TRACKER}_${state.currentPage}`, state.loanTracker);
+          utils.saveState(`${CONSTANTS.STATE_KEYS.AUCTION_TRACKER}_${state.currentPage}`, state.loanTracker);
+          utils.saveState(`${CONSTANTS.STATE_KEYS.COUNTDOWN_GROUPS}_${state.currentPage}`, state.countdownGroups);
+          utils.saveState(`${CONSTANTS.STATE_KEYS.MANUAL_COUNTDOWN_GROUPS}_${state.currentPage}`, state.manualCountdownGroups);
+          utils.saveState(`${CONSTANTS.STATE_KEYS.CLOCKS}_${state.currentPage}`, state.clocks);
+          utils.saveState(CONSTANTS.STATE_KEYS.LIGHT_MODE, state.isLightMode);
+          utils.saveState(CONSTANTS.STATE_KEYS.SIDEBAR_POSITION, state.isSidebarRight);
+          utils.saveState(CONSTANTS.STATE_KEYS.LEGIBLE_NAMES_ENABLED, state.legibleNamesEnabled);
+          utils.saveState(CONSTANTS.STATE_KEYS.STORAGE_MANAGER_ENABLED, state.storageManagerEnabled);
+          utils.saveState(CONSTANTS.STATE_KEYS.CURRENT_PAGE, state.currentPage);
+          utils.saveState(CONSTANTS.STATE_KEYS.PAGE_DATA, state.pageData);
+          utils.saveState(CONSTANTS.BACKGROUND_ENABLED_KEY, state.backgroundEnabled);
+          utils.saveState(CONSTANTS.BACKGROUND_IMAGES_KEY, state.backgroundImages);
+          utils.saveState(CONSTANTS.BACKGROUND_KEY, state.currentBackgroundIndex);
+          utils.saveState(CONSTANTS.PARALLAX_SPEED_KEY, state.parallaxSpeed);
+          localStorage.setItem('sidebarAutoWidth', state.isAutoWidth ? '1' : '0');
+          if (state.backgroundEnabled) {
+            try {
+              applyBackground();
+            } catch (e) {
+              console.error('Error applying background after import:', e);
+            }
+          }
+          refreshSidebar();
+          utils.showToast('Data imported successfully', 'success');
+        } catch (error) {
+          console.error('Import error:', error);
+          utils.showToast('Error importing data', 'error');
+        }
+      };
+      reader.readAsText(file);
+    };
+    input.click();
+     }
 
   function resetAllData() {
     try {
@@ -5761,7 +5761,7 @@ ${dom.createDialogButtons(theme)}
             <button id="add-image-btn" class="settings-button">Add Image</button>
         </div>
         <div id="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 10px; max-height: 400px; overflow-y: auto; scrollbar-width: thin;">
-            ${tempBackgroundImages.map((img, index) => `<div class="gallery-item"data-index="${index}"style="cursor: pointer; border: 2px solid ${index === tempCurrentBackgroundIndex ? theme.SUCCESS : 'transparent'}; border-radius: 5px; overflow: hidden; position: relative;"><img src="${img}"alt=""style="width: 100%; height: 80px; object-fit: cover;"oonerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjgwIiB2aWV3Qm94PSIwIDAgMTAwIDgwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iODAiIGZpbGw9IiNmZmYiLz48Y2lyY2xlIGN4PSI1MCIgY3k9IjQwIiByPSIyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOTk5OTk5IiBzdHJva2Utd2lkdGg9IjIiLz48bGluZSB4MT0iMzAiIHkxPSI2MCIgeDI9IjcwIiB5Mj0iMjAiIHN0cm9rZT0iIzk5OTk5OSIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9zdmc+';"><button class="remove-btn"data-index="${index}"style="position: absolute; top: 0px; right: 0px; background: ${theme.DANGER}; color: white; border: none; width: 20px; height: 20px; font-size: 12px; cursor: pointer;">Ã—</button></div>`).join('')}
+            ${tempBackgroundImages.map((img, index) => `<div class="gallery-item"data-index="${index}"style="cursor: pointer; border: 2px solid ${index === tempCurrentBackgroundIndex ? theme.SUCCESS : 'transparent'}; border-radius: 5px; overflow: hidden; position: relative;"><img src="${img}"alt=""style="width: 100%; height: 80px; object-fit: cover;"oonerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjgwIiB2aWV3Qm94PSIwIDAgMTAwIDgwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iODAiIGZpbGw9IiNmZmYiLz48Y2lyY2xlIGN4PSI1MCIgY3k9IjQwIiByPSIyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOTk5OTk5IiBzdHJva2Utd2lkdGg9IjIiLz48bGluZSB4MT0iMzAiIHkxPSI2MCIgeDI9IjcwIiB5Mj0iMjAiIHN0cm9rZT0iIzk5OTk5OSIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9zdmc+';"><button class="remove-btn"data-index="${index}"style="position: absolute; top: 0px; right: 0px; background: ${theme.DANGER}; color: white; border: none; width: 20px; height: 20px; font-size: 12px; cursor: pointer;">×</button></div>`).join('')}
         </div>
         <div style="margin-top: 15px;">
             <input type="range" id="parallax-speed" min="0" max="1" step="0.1" value="${tempParallaxSpeed}" style="width: 100%;">
@@ -5837,7 +5837,7 @@ ${dom.createDialogButtons(theme)}
       grid.innerHTML = images.map((img, index) => `
             <div class="gallery-item" data-index="${index}" style="cursor: pointer; border: 2px solid ${index === currentIndex ? theme.SUCCESS : 'transparent'}; border-radius: 5px; overflow: hidden; position: relative;">
                 <img src="${img}" alt="" style="width: 100%; height: 80px; object-fit: cover;" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjgwIiB2aWV3Qm94PSIwIDAgMTAwIDgwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iODAiIGZpbGw9IiNmZmYiLz48Y2lyY2xlIGN4PSI1MCIgY3k9IjQwIiByPSIyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOTk5OTk5IiBzdHJva2Utd2lkdGg9IjIiLz48bGluZSB4MT0iMzAiIHkxPSI2MCIgeDI9IjcwIiB5Mj0iMjAiIHN0cm9rZT0iIzk5OTk5OSIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9zdmc+';">
-                <button class="remove-btn" data-index="${index}" style="position: absolute; top: 0px; right: 0px; background: ${theme.DANGER}; color: white; border: none; width: 20px; height: 20px; font-size: 12px; cursor: pointer;">Ã—</button>
+                <button class="remove-btn" data-index="${index}" style="position: absolute; top: 0px; right: 0px; background: ${theme.DANGER}; color: white; border: none; width: 20px; height: 20px; font-size: 12px; cursor: pointer;">×</button>
             </div>
         `).join('');
     }
@@ -6335,7 +6335,7 @@ ${dom.createDialogButtons(theme)}
     menu.innerHTML = `
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
         <h2 style="color: ${theme.TEXT}; margin: 0;">SideWinder Settings</h2>
-        <button id="debug-close" class="settings-button">âœ•</button>
+        <button id="debug-close" class="settings-button">✕</button>
     </div>
     <div class="settings-section">
         <div class="settings-title">Theme</div>
@@ -6725,7 +6725,7 @@ ${dom.createDialogButtons(theme)}
     will-change: transform;
     transform: translateZ(0);
     `;
-    resizer.innerHTML = 'â®§';
+    resizer.innerHTML = '⮧';
     const createIndicators = () => {
       const indicators = {
         horizontal: document.createElement('div'),
@@ -6790,7 +6790,7 @@ ${dom.createDialogButtons(theme)}
         };
       },
       showDimensionTooltip: (x, y, width, height) => {
-        indicators.tooltip.textContent = `${Math.round(width)}px Ã— ${Math.round(height)}px`;
+        indicators.tooltip.textContent = `${Math.round(width)}px × ${Math.round(height)}px`;
         indicators.tooltip.style.display = 'block';
         indicators.tooltip.style.left = `${x + 10}px`;
         indicators.tooltip.style.top = `${y + 10}px`;
