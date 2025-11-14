@@ -5287,43 +5287,54 @@ ${dom.createDialogButtons(theme)}
   }
 
   function exportAllData() {
-    const data = {
-      groups: state.groups,
-      notepads: state.notepads,
-      attackLists: state.attackLists,
-      todoLists: state.todoLists,
-      loanTracker: state.loanTracker,
-      auctionTracker: state.auctionTracker,
-      countdownGroups: state.countdownGroups,
-      manualCountdownGroups: state.manualCountdownGroups,
-      clocks: state.clocks,
-      isLightMode: state.isLightMode,
-      isSidebarRight: state.isSidebarRight,
-      legibleNamesEnabled: state.legibleNamesEnabled,
-      storageManagerEnabled: state.storageManagerEnabled,
-      currentPage: state.currentPage,
-      pageData: state.pageData,
-      backgroundEnabled: state.backgroundEnabled,
-      backgroundImages: state.backgroundImages,
-      currentBackgroundIndex: state.currentBackgroundIndex,
-      parallaxSpeed: state.parallaxSpeed,
-      isAutoWidth: state.isAutoWidth,
-      clockVisible: state.clockVisible,
-      chatOverrideVisible: state.chatOverrideVisible
-    };
-    const blob = new Blob([JSON.stringify(data, null, 2)], {
-      type: 'application/json'
-    });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'sidewinder_backup.json';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-    utils.showToast('Data exported successfully', 'success');
-  }
+	const data = {
+		pageData: [{}, {}, {}],
+		isLightMode: state.isLightMode,
+		isSidebarRight: state.isSidebarRight,
+		legibleNamesEnabled: state.legibleNamesEnabled,
+		storageManagerEnabled: state.storageManagerEnabled,
+		currentPage: state.currentPage,
+		backgroundEnabled: state.backgroundEnabled,
+		backgroundImages: state.backgroundImages,
+		currentBackgroundIndex: state.currentBackgroundIndex,
+		parallaxSpeed: state.parallaxSpeed,
+		isAutoWidth: state.isAutoWidth,
+		clockVisible: state.clockVisible,
+		chatOverrideVisible: state.chatOverrideVisible
+	};
+	for (let i = 0; i < 3; i++) {
+		const groupsState = localStorage.getItem(`${CONSTANTS.STATE_KEYS.GROUPS}_${i}`);
+		if (groupsState && groupsState !== "null") data.pageData[i].groups = JSON.parse(groupsState);
+		const notepadsState = localStorage.getItem(`${CONSTANTS.STATE_KEYS.NOTEPADS}_${i}`);
+		if (notepadsState && notepadsState !== "null") data.pageData[i].notepads = JSON.parse(notepadsState);
+		const attackListsState = localStorage.getItem(`${CONSTANTS.STATE_KEYS.ATTACK_LISTS}_${i}`);
+		if (attackListsState && attackListsState !== "null") data.pageData[i].attackLists = JSON.parse(attackListsState);
+		const todoListsState = localStorage.getItem(`${CONSTANTS.STATE_KEYS.TODO_LISTS}_${i}`);
+		if (todoListsState && todoListsState !== "null") data.pageData[i].todoLists = JSON.parse(todoListsState);
+		const loanTrackerState = localStorage.getItem(`${CONSTANTS.STATE_KEYS.LOAN_TRACKER}_${i}`);
+		if (loanTrackerState && loanTrackerState !== "null") data.pageData[i].loanTracker = JSON.parse(loanTrackerState);
+		const auctionTrackerState = localStorage.getItem(`${CONSTANTS.STATE_KEYS.AUCTION_TRACKER}_${i}`);
+		if (auctionTrackerState && auctionTrackerState !== "null") data.pageData[i].auctionTracker = JSON.parse(auctionTrackerState);
+		const countdownGroupsState = localStorage.getItem(`${CONSTANTS.STATE_KEYS.COUNTDOWN_GROUPS}_${i}`);
+		if (countdownGroupsState && countdownGroupsState !== "null") data.pageData[i].countdownGroups = JSON.parse(countdownGroupsState);
+		const manualCountdownGroupsState = localStorage.getItem(`${CONSTANTS.STATE_KEYS.MANUAL_COUNTDOWN_GROUPS}_${i}`);
+		if (manualCountdownGroupsState && manualCountdownGroupsState !== "null") data.pageData[i].manualCountdownGroups = JSON.parse(manualCountdownGroupsState);
+		const clocksState = localStorage.getItem(`${CONSTANTS.STATE_KEYS.CLOCKS}_${i}`);
+		if (clocksState && clocksState !== "null") data.pageData[i].clocks = JSON.parse(clocksState);
+	}
+	const blob = new Blob([JSON.stringify(data, null, 2)], {
+		type: 'application/json'
+	});
+	const url = URL.createObjectURL(blob);
+	const a = document.createElement('a');
+	a.href = url;
+	a.download = 'sidewinder_backup.json';
+	document.body.appendChild(a);
+	a.click();
+	document.body.removeChild(a);
+	URL.revokeObjectURL(url);
+	utils.showToast('Data exported successfully', 'success');
+   }
 
   function addDebugManager() {
     const pageSelector = document.getElementById('page-selector');
@@ -5406,76 +5417,92 @@ ${dom.createDialogButtons(theme)}
   }
 
   function importAllData() {
-    const input = document.createElement('input');
-    input.type = 'file';
-    input.accept = '.json';
-    input.onchange = (e) => {
-      const file = e.target.files[0];
-      if (!file) return;
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        try {
-          const data = JSON.parse(event.target.result);
-          if (data.groups !== undefined) state.groups = data.groups;
-          if (data.notepads !== undefined) state.notepads = data.notepads;
-          if (data.attackLists !== undefined) state.attackLists = data.attackLists;
-          if (data.todoLists !== undefined) state.todoLists = data.todoLists;
-          if (data.loanTracker !== undefined) state.loanTracker = data.loanTracker;
-          if (data.auctionTracker !== undefined) state.auctionTracker = data.auctionTracker;
-          if (data.countdownGroups !== undefined) state.countdownGroups = data.countdownGroups;
-          if (data.manualCountdownGroups !== undefined) state.manualCountdownGroups = data.manualCountdownGroups;
-          if (data.clocks !== undefined) state.clocks = data.clocks;
-          if (data.isLightMode !== undefined) state.isLightMode = data.isLightMode;
-          if (data.isSidebarRight !== undefined) state.isSidebarRight = data.isSidebarRight;
-          if (data.legibleNamesEnabled !== undefined) state.legibleNamesEnabled = data.legibleNamesEnabled;
-          if (data.storageManagerEnabled !== undefined) state.storageManagerEnabled = data.storageManagerEnabled;
-          if (data.currentPage !== undefined) state.currentPage = data.currentPage;
-          if (data.pageData !== undefined) state.pageData = data.pageData;
-          if (data.backgroundEnabled !== undefined) state.backgroundEnabled = data.backgroundEnabled;
-          if (data.backgroundImages !== undefined) state.backgroundImages = data.backgroundImages;
-          if (data.currentBackgroundIndex !== undefined) state.currentBackgroundIndex = data.currentBackgroundIndex;
-          if (data.parallaxSpeed !== undefined) state.parallaxSpeed = data.parallaxSpeed;
-          if (data.isAutoWidth !== undefined) state.isAutoWidth = data.isAutoWidth;
-          if (data.clockVisible !== undefined) state.clockVisible = data.clockVisible;
-          if (data.chatOverrideVisible !== undefined) state.chatOverrideVisible = data.chatOverrideVisible;
-          utils.saveState(`${CONSTANTS.STATE_KEYS.GROUPS}_${state.currentPage}`, state.groups);
-          utils.saveState(`${CONSTANTS.STATE_KEYS.NOTEPADS}_${state.currentPage}`, state.notepads);
-          utils.saveState(`${CONSTANTS.STATE_KEYS.ATTACK_LISTS}_${state.currentPage}`, state.attackLists);
-          utils.saveState(`${CONSTANTS.STATE_KEYS.TODO_LISTS}_${state.currentPage}`, state.todoLists);
-          utils.saveState(`${CONSTANTS.STATE_KEYS.LOAN_TRACKER}_${state.currentPage}`, state.loanTracker);
-          utils.saveState(`${CONSTANTS.STATE_KEYS.AUCTION_TRACKER}_${state.currentPage}`, state.auctionTracker);
-          utils.saveState(`${CONSTANTS.STATE_KEYS.COUNTDOWN_GROUPS}_${state.currentPage}`, state.countdownGroups);
-          utils.saveState(`${CONSTANTS.STATE_KEYS.MANUAL_COUNTDOWN_GROUPS}_${state.currentPage}`, state.manualCountdownGroups);
-          utils.saveState(`${CONSTANTS.STATE_KEYS.CLOCKS}_${state.currentPage}`, state.clocks);
-          utils.saveState(CONSTANTS.STATE_KEYS.LIGHT_MODE, state.isLightMode);
-          utils.saveState(CONSTANTS.STATE_KEYS.SIDEBAR_POSITION, state.isSidebarRight);
-          utils.saveState(CONSTANTS.STATE_KEYS.LEGIBLE_NAMES_ENABLED, state.legibleNamesEnabled);
-          utils.saveState(CONSTANTS.STATE_KEYS.STORAGE_MANAGER_ENABLED, state.storageManagerEnabled);
-          utils.saveState(CONSTANTS.STATE_KEYS.CURRENT_PAGE, state.currentPage);
-          utils.saveState(CONSTANTS.STATE_KEYS.PAGE_DATA, state.pageData);
-          utils.saveState(CONSTANTS.BACKGROUND_ENABLED_KEY, state.backgroundEnabled);
-          utils.saveState(CONSTANTS.BACKGROUND_IMAGES_KEY, state.backgroundImages);
-          utils.saveState(CONSTANTS.BACKGROUND_KEY, state.currentBackgroundIndex);
-          utils.saveState(CONSTANTS.PARALLAX_SPEED_KEY, state.parallaxSpeed);
-          localStorage.setItem('sidebarAutoWidth', state.isAutoWidth ? '1' : '0');
-          if (state.backgroundEnabled) {
-            try {
-              applyBackground();
-            } catch (e) {
-              console.error('Error applying background after import:', e);
-            }
-          }
-          refreshSidebar();
-          utils.showToast('Data imported successfully', 'success');
-        } catch (error) {
-          console.error('Import error:', error);
-          utils.showToast('Error importing data', 'error');
-        }
-      };
-      reader.readAsText(file);
-    };
-    input.click();
-  }
+	const input = document.createElement('input');
+	input.type = 'file';
+	input.accept = '.json';
+	input.onchange = (e) => {
+		const file = e.target.files[0];
+		if (!file) return;
+		const reader = new FileReader();
+		reader.onload = (event) => {
+			try {
+				const data = JSON.parse(event.target.result);
+				if (data.pageData !== undefined && Array.isArray(data.pageData)) {
+					for (let i = 0; i < Math.min(data.pageData.length, 3); i++) {
+						if (data.pageData[i]) {
+							if (data.pageData[i].groups !== undefined) utils.saveState(`${CONSTANTS.STATE_KEYS.GROUPS}_${i}`, data.pageData[i].groups);
+							if (data.pageData[i].notepads !== undefined) utils.saveState(`${CONSTANTS.STATE_KEYS.NOTEPADS}_${i}`, data.pageData[i].notepads);
+							if (data.pageData[i].attackLists !== undefined) utils.saveState(`${CONSTANTS.STATE_KEYS.ATTACK_LISTS}_${i}`, data.pageData[i].attackLists);
+							if (data.pageData[i].todoLists !== undefined) utils.saveState(`${CONSTANTS.STATE_KEYS.TODO_LISTS}_${i}`, data.pageData[i].todoLists);
+							if (data.pageData[i].loanTracker !== undefined) utils.saveState(`${CONSTANTS.STATE_KEYS.LOAN_TRACKER}_${i}`, data.pageData[i].loanTracker);
+							if (data.pageData[i].auctionTracker !== undefined) utils.saveState(`${CONSTANTS.STATE_KEYS.AUCTION_TRACKER}_${i}`, data.pageData[i].auctionTracker);
+							if (data.pageData[i].countdownGroups !== undefined) utils.saveState(`${CONSTANTS.STATE_KEYS.COUNTDOWN_GROUPS}_${i}`, data.pageData[i].countdownGroups);
+							if (data.pageData[i].manualCountdownGroups !== undefined) utils.saveState(`${CONSTANTS.STATE_KEYS.MANUAL_COUNTDOWN_GROUPS}_${i}`, data.pageData[i].manualCountdownGroups);
+							if (data.pageData[i].clocks !== undefined) utils.saveState(`${CONSTANTS.STATE_KEYS.CLOCKS}_${i}`, data.pageData[i].clocks);
+						}
+					}
+					if (data.pageData[data.currentPage]) {
+						state.groups = data.pageData[data.currentPage].groups || [];
+						state.notepads = data.pageData[data.currentPage].notepads || [];
+						state.attackLists = data.pageData[data.currentPage].attackLists || [];
+						state.todoLists = data.pageData[data.currentPage].todoLists || [];
+						state.loanTracker = data.pageData[data.currentPage].loanTracker || { entries: [] };
+						state.auctionTracker = data.pageData[data.currentPage].auctionTracker || { auctions: [] };
+						state.countdownGroups = data.pageData[data.currentPage].countdownGroups || [];
+						state.manualCountdownGroups = data.pageData[data.currentPage].manualCountdownGroups || [];
+						state.clocks = data.pageData[data.currentPage].clocks || [];
+					}
+				}
+				if (data.isLightMode !== undefined) state.isLightMode = data.isLightMode;
+				if (data.isSidebarRight !== undefined) state.isSidebarRight = data.isSidebarRight;
+				if (data.legibleNamesEnabled !== undefined) state.legibleNamesEnabled = data.legibleNamesEnabled;
+				if (data.storageManagerEnabled !== undefined) state.storageManagerEnabled = data.storageManagerEnabled;
+				if (data.currentPage !== undefined) state.currentPage = data.currentPage;
+				if (data.backgroundEnabled !== undefined) state.backgroundEnabled = data.backgroundEnabled;
+				if (data.backgroundImages !== undefined) state.backgroundImages = data.backgroundImages;
+				if (data.currentBackgroundIndex !== undefined) state.currentBackgroundIndex = data.currentBackgroundIndex;
+				if (data.parallaxSpeed !== undefined) state.parallaxSpeed = data.parallaxSpeed;
+				if (data.isAutoWidth !== undefined) state.isAutoWidth = data.isAutoWidth;
+				if (data.clockVisible !== undefined) state.clockVisible = data.clockVisible;
+				if (data.chatOverrideVisible !== undefined) state.chatOverrideVisible = data.chatOverrideVisible;
+				utils.saveState(`${CONSTANTS.STATE_KEYS.GROUPS}_${state.currentPage}`, state.groups);
+				utils.saveState(`${CONSTANTS.STATE_KEYS.NOTEPADS}_${state.currentPage}`, state.notepads);
+				utils.saveState(`${CONSTANTS.STATE_KEYS.ATTACK_LISTS}_${state.currentPage}`, state.attackLists);
+				utils.saveState(`${CONSTANTS.STATE_KEYS.TODO_LISTS}_${state.currentPage}`, state.todoLists);
+				utils.saveState(`${CONSTANTS.STATE_KEYS.LOAN_TRACKER}_${state.currentPage}`, state.loanTracker);
+				utils.saveState(`${CONSTANTS.STATE_KEYS.AUCTION_TRACKER}_${state.currentPage}`, state.loanTracker);
+				utils.saveState(`${CONSTANTS.STATE_KEYS.COUNTDOWN_GROUPS}_${state.currentPage}`, state.countdownGroups);
+				utils.saveState(`${CONSTANTS.STATE_KEYS.MANUAL_COUNTDOWN_GROUPS}_${state.currentPage}`, state.manualCountdownGroups);
+				utils.saveState(`${CONSTANTS.STATE_KEYS.CLOCKS}_${state.currentPage}`, state.clocks);
+				utils.saveState(CONSTANTS.STATE_KEYS.LIGHT_MODE, state.isLightMode);
+				utils.saveState(CONSTANTS.STATE_KEYS.SIDEBAR_POSITION, state.isSidebarRight);
+				utils.saveState(CONSTANTS.STATE_KEYS.LEGIBLE_NAMES_ENABLED, state.legibleNamesEnabled);
+				utils.saveState(CONSTANTS.STATE_KEYS.STORAGE_MANAGER_ENABLED, state.storageManagerEnabled);
+				utils.saveState(CONSTANTS.STATE_KEYS.CURRENT_PAGE, state.currentPage);
+				utils.saveState(CONSTANTS.STATE_KEYS.PAGE_DATA, state.pageData);
+				utils.saveState(CONSTANTS.BACKGROUND_ENABLED_KEY, state.backgroundEnabled);
+				utils.saveState(CONSTANTS.BACKGROUND_IMAGES_KEY, state.backgroundImages);
+				utils.saveState(CONSTANTS.BACKGROUND_KEY, state.currentBackgroundIndex);
+				utils.saveState(CONSTANTS.PARALLAX_SPEED_KEY, state.parallaxSpeed);
+				localStorage.setItem('sidebarAutoWidth', state.isAutoWidth ? '1' : '0');
+				if (state.backgroundEnabled) {
+					try {
+						applyBackground();
+					} catch (e) {
+						console.error('Error applying background after import:', e);
+					}
+				}
+				refreshSidebar();
+				utils.showToast('Data imported successfully', 'success');
+			} catch (error) {
+				console.error('Import error:', error);
+				utils.showToast('Error importing data', 'error');
+			}
+		};
+		reader.readAsText(file);
+	};
+	input.click();
+   }
 
   function resetAllData() {
     try {
