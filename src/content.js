@@ -90,6 +90,7 @@
     chatOverrideVisible: false,
     calculatorVisible: false,
     backgroundEnabled: false,
+    storageManagerEnabled: false,
     backgroundImages: ['https://raw.githubusercontent.com/BigBongTheory42/SideWinder-Torn-City-Sidebar-Extension/refs/heads/main/src/assets/DefaultBackgroundimage.png'],
     currentBackgroundIndex: 0,
     parallaxSpeed: 0.1
@@ -5287,21 +5288,12 @@ ${dom.createDialogButtons(theme)}
 
   function exportAllData() {
     const data = {
-      groups: state.groups,
-      notepads: state.notepads,
-      attackLists: state.attackLists,
-      todoLists: state.todoLists,
-      loanTracker: state.loanTracker,
-      auctionTracker: state.auctionTracker,
-      countdownGroups: state.countdownGroups,
-      manualCountdownGroups: state.manualCountdownGroups,
-      clocks: state.clocks,
+      pageData: [{}, {}, {}],
       isLightMode: state.isLightMode,
       isSidebarRight: state.isSidebarRight,
       legibleNamesEnabled: state.legibleNamesEnabled,
       storageManagerEnabled: state.storageManagerEnabled,
       currentPage: state.currentPage,
-      pageData: state.pageData,
       backgroundEnabled: state.backgroundEnabled,
       backgroundImages: state.backgroundImages,
       currentBackgroundIndex: state.currentBackgroundIndex,
@@ -5310,6 +5302,26 @@ ${dom.createDialogButtons(theme)}
       clockVisible: state.clockVisible,
       chatOverrideVisible: state.chatOverrideVisible
     };
+    for (let i = 0; i < 3; i++) {
+      const groupsState = localStorage.getItem(`${CONSTANTS.STATE_KEYS.GROUPS}_${i}`);
+      if (groupsState && groupsState !== "null") data.pageData[i].groups = JSON.parse(groupsState);
+      const notepadsState = localStorage.getItem(`${CONSTANTS.STATE_KEYS.NOTEPADS}_${i}`);
+      if (notepadsState && notepadsState !== "null") data.pageData[i].notepads = JSON.parse(notepadsState);
+      const attackListsState = localStorage.getItem(`${CONSTANTS.STATE_KEYS.ATTACK_LISTS}_${i}`);
+      if (attackListsState && attackListsState !== "null") data.pageData[i].attackLists = JSON.parse(attackListsState);
+      const todoListsState = localStorage.getItem(`${CONSTANTS.STATE_KEYS.TODO_LISTS}_${i}`);
+      if (todoListsState && todoListsState !== "null") data.pageData[i].todoLists = JSON.parse(todoListsState);
+      const loanTrackerState = localStorage.getItem(`${CONSTANTS.STATE_KEYS.LOAN_TRACKER}_${i}`);
+      if (loanTrackerState && loanTrackerState !== "null") data.pageData[i].loanTracker = JSON.parse(loanTrackerState);
+      const auctionTrackerState = localStorage.getItem(`${CONSTANTS.STATE_KEYS.AUCTION_TRACKER}_${i}`);
+      if (auctionTrackerState && auctionTrackerState !== "null") data.pageData[i].auctionTracker = JSON.parse(auctionTrackerState);
+      const countdownGroupsState = localStorage.getItem(`${CONSTANTS.STATE_KEYS.COUNTDOWN_GROUPS}_${i}`);
+      if (countdownGroupsState && countdownGroupsState !== "null") data.pageData[i].countdownGroups = JSON.parse(countdownGroupsState);
+      const manualCountdownGroupsState = localStorage.getItem(`${CONSTANTS.STATE_KEYS.MANUAL_COUNTDOWN_GROUPS}_${i}`);
+      if (manualCountdownGroupsState && manualCountdownGroupsState !== "null") data.pageData[i].manualCountdownGroups = JSON.parse(manualCountdownGroupsState);
+      const clocksState = localStorage.getItem(`${CONSTANTS.STATE_KEYS.CLOCKS}_${i}`);
+      if (clocksState && clocksState !== "null") data.pageData[i].clocks = JSON.parse(clocksState);
+    }
     const blob = new Blob([JSON.stringify(data, null, 2)], {
       type: 'application/json'
     });
@@ -5322,7 +5334,7 @@ ${dom.createDialogButtons(theme)}
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
     utils.showToast('Data exported successfully', 'success');
-  }
+     }
 
   function addDebugManager() {
     const pageSelector = document.getElementById('page-selector');
@@ -5415,21 +5427,37 @@ ${dom.createDialogButtons(theme)}
       reader.onload = (event) => {
         try {
           const data = JSON.parse(event.target.result);
-          if (data.groups !== undefined) state.groups = data.groups;
-          if (data.notepads !== undefined) state.notepads = data.notepads;
-          if (data.attackLists !== undefined) state.attackLists = data.attackLists;
-          if (data.todoLists !== undefined) state.todoLists = data.todoLists;
-          if (data.loanTracker !== undefined) state.loanTracker = data.loanTracker;
-          if (data.auctionTracker !== undefined) state.auctionTracker = data.auctionTracker;
-          if (data.countdownGroups !== undefined) state.countdownGroups = data.countdownGroups;
-          if (data.manualCountdownGroups !== undefined) state.manualCountdownGroups = data.manualCountdownGroups;
-          if (data.clocks !== undefined) state.clocks = data.clocks;
+          if (data.pageData !== undefined && Array.isArray(data.pageData)) {
+            for (let i = 0; i < Math.min(data.pageData.length, 3); i++) {
+              if (data.pageData[i]) {
+                if (data.pageData[i].groups !== undefined) utils.saveState(`${CONSTANTS.STATE_KEYS.GROUPS}_${i}`, data.pageData[i].groups);
+                if (data.pageData[i].notepads !== undefined) utils.saveState(`${CONSTANTS.STATE_KEYS.NOTEPADS}_${i}`, data.pageData[i].notepads);
+                if (data.pageData[i].attackLists !== undefined) utils.saveState(`${CONSTANTS.STATE_KEYS.ATTACK_LISTS}_${i}`, data.pageData[i].attackLists);
+                if (data.pageData[i].todoLists !== undefined) utils.saveState(`${CONSTANTS.STATE_KEYS.TODO_LISTS}_${i}`, data.pageData[i].todoLists);
+                if (data.pageData[i].loanTracker !== undefined) utils.saveState(`${CONSTANTS.STATE_KEYS.LOAN_TRACKER}_${i}`, data.pageData[i].loanTracker);
+                if (data.pageData[i].auctionTracker !== undefined) utils.saveState(`${CONSTANTS.STATE_KEYS.AUCTION_TRACKER}_${i}`, data.pageData[i].auctionTracker);
+                if (data.pageData[i].countdownGroups !== undefined) utils.saveState(`${CONSTANTS.STATE_KEYS.COUNTDOWN_GROUPS}_${i}`, data.pageData[i].countdownGroups);
+                if (data.pageData[i].manualCountdownGroups !== undefined) utils.saveState(`${CONSTANTS.STATE_KEYS.MANUAL_COUNTDOWN_GROUPS}_${i}`, data.pageData[i].manualCountdownGroups);
+                if (data.pageData[i].clocks !== undefined) utils.saveState(`${CONSTANTS.STATE_KEYS.CLOCKS}_${i}`, data.pageData[i].clocks);
+              }
+            }
+            if (data.pageData[data.currentPage]) {
+              state.groups = data.pageData[data.currentPage].groups || [];
+              state.notepads = data.pageData[data.currentPage].notepads || [];
+              state.attackLists = data.pageData[data.currentPage].attackLists || [];
+              state.todoLists = data.pageData[data.currentPage].todoLists || [];
+              state.loanTracker = data.pageData[data.currentPage].loanTracker || { entries: [] };
+              state.auctionTracker = data.pageData[data.currentPage].auctionTracker || { auctions: [] };
+              state.countdownGroups = data.pageData[data.currentPage].countdownGroups || [];
+              state.manualCountdownGroups = data.pageData[data.currentPage].manualCountdownGroups || [];
+              state.clocks = data.pageData[data.currentPage].clocks || [];
+            }
+          }
           if (data.isLightMode !== undefined) state.isLightMode = data.isLightMode;
           if (data.isSidebarRight !== undefined) state.isSidebarRight = data.isSidebarRight;
           if (data.legibleNamesEnabled !== undefined) state.legibleNamesEnabled = data.legibleNamesEnabled;
           if (data.storageManagerEnabled !== undefined) state.storageManagerEnabled = data.storageManagerEnabled;
           if (data.currentPage !== undefined) state.currentPage = data.currentPage;
-          if (data.pageData !== undefined) state.pageData = data.pageData;
           if (data.backgroundEnabled !== undefined) state.backgroundEnabled = data.backgroundEnabled;
           if (data.backgroundImages !== undefined) state.backgroundImages = data.backgroundImages;
           if (data.currentBackgroundIndex !== undefined) state.currentBackgroundIndex = data.currentBackgroundIndex;
@@ -5442,7 +5470,7 @@ ${dom.createDialogButtons(theme)}
           utils.saveState(`${CONSTANTS.STATE_KEYS.ATTACK_LISTS}_${state.currentPage}`, state.attackLists);
           utils.saveState(`${CONSTANTS.STATE_KEYS.TODO_LISTS}_${state.currentPage}`, state.todoLists);
           utils.saveState(`${CONSTANTS.STATE_KEYS.LOAN_TRACKER}_${state.currentPage}`, state.loanTracker);
-          utils.saveState(`${CONSTANTS.STATE_KEYS.AUCTION_TRACKER}_${state.currentPage}`, state.auctionTracker);
+          utils.saveState(`${CONSTANTS.STATE_KEYS.AUCTION_TRACKER}_${state.currentPage}`, state.loanTracker);
           utils.saveState(`${CONSTANTS.STATE_KEYS.COUNTDOWN_GROUPS}_${state.currentPage}`, state.countdownGroups);
           utils.saveState(`${CONSTANTS.STATE_KEYS.MANUAL_COUNTDOWN_GROUPS}_${state.currentPage}`, state.manualCountdownGroups);
           utils.saveState(`${CONSTANTS.STATE_KEYS.CLOCKS}_${state.currentPage}`, state.clocks);
@@ -5474,7 +5502,7 @@ ${dom.createDialogButtons(theme)}
       reader.readAsText(file);
     };
     input.click();
-  }
+     }
 
   function resetAllData() {
     try {
@@ -5865,6 +5893,119 @@ ${dom.createDialogButtons(theme)}
           console.warn('stockVault: jQuery not found, skipping initialization');
           return;
         }
+        if (!document.getElementById('stock-vault-styles')) {
+          const style = `
+    #stock-vault-container {
+      background: rgba(0,0,0,0.1);
+      padding: 8px 15px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #609b9b;
+    }
+    
+    .main-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+    
+    .vault-btn {
+      font-size: 18px !important;
+      font-weight: bold !important;
+      padding: 10px 25px !important;
+      order: 1;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      line-height: 1 !important;
+    }
+    
+    #stockid {
+      min-width: 120px;
+      color: white;
+      background: rgba(0,0,0,0.3);
+      border: 1px solid #609b9b;
+      border-radius: 5px;
+      padding: 5px;
+      order: 2;
+    }
+    
+    #sellval {
+      color: white;
+      border: 2px solid #609b9b;
+      border-radius: 8px;
+      padding: 5px 12px;
+      background: transparent;
+      width: 120px;
+      order: 3;
+    }
+    
+    #sellval:focus {
+      box-shadow: 0 0 5px #609b9b;
+      outline: none;
+    }
+    
+    #sellamt {
+      order: 4;
+    }
+    
+    #preset-buttons {
+      display: flex;
+      gap: 2px;
+      flex-wrap: nowrap;
+      order: 5;
+    }
+    
+    .preset-btn {
+      font-size: 10px !important;
+      padding: 3px 6px !important;
+      margin: 0 !important;
+      min-width: 30px;
+      white-space: nowrap;
+    }
+    
+    .preset-manage {
+      font-size: 14px !important;
+      padding: 4px 8px !important;
+      margin: 0 !important;
+      width: 30px;
+      order: 6;
+    }
+    
+    #responseStock {
+      font-weight: bold;
+      font-size: 13px;
+      order: 7;
+      margin-left: auto;
+    }
+    
+    @media (max-width: 768px) {
+      .main-controls {
+        gap: 8px;
+      }
+    
+      .vault-btn {
+        font-size: 14px !important;
+        padding: 6px 16px !important;
+      }
+    
+      #sellval {
+        width: 100px;
+      }
+    
+      #preset-buttons {
+        flex-wrap: wrap;
+      }
+    }
+    `;
+          const styleSheet = document.createElement("style");
+          styleSheet.id = 'stock-vault-styles';
+          styleSheet.textContent = style;
+          document.head.appendChild(styleSheet);
+        }
+        
         await waitForElement("ul[class^='stock_']");
         let savedStock = Storage.get('selectedStock', '');
         let presetAmounts = Storage.get('presetAmounts', ['50k', '250k', '1m', '5m', '10m']);
@@ -5880,22 +6021,22 @@ ${dom.createDialogButtons(theme)}
         });
         symbols.sort();
         const container = `
-      <div id="stock-vault-container">
-        <div class="main-controls">
-          <button id="vaultall" class="torn-btn vault-btn">VAULT ALL</button>
-          <select name="stock" id="stockid">
-            <option value="">Select Stock</option>
-            ${symbols.map(sy => `<option value="${sy}"${savedStock===sy?'selected':''}>${sy}</option>`).join('')}
-          </select>
-          <input type="text" placeholder="Amount" id="sellval" autocomplete="off">
-          <button id="sellamt" class="torn-btn">Withdraw</button>
-          <div id="preset-buttons">
-            ${presetAmounts.map(amount => `<button class="preset-btn torn-btn"data-amount="${amount}">${amount}</button>`).join('')}
-          </div>
-          <button id="edit-presets" class="torn-btn preset-manage">✎</button>
-          <span id="responseStock"></span>
-        </div>
-      </div>`;
+          <div id="stock-vault-container">
+            <div class="main-controls">
+              <button id="vaultall" class="torn-btn vault-btn">VAULT ALL</button>
+              <select name="stock" id="stockid">
+                <option value="">Select Stock</option>
+                ${symbols.map(sy => `<option value="${sy}"${savedStock===sy?' selected':''}>${sy}</option>`).join('')}
+              </select>
+              <input type="text" placeholder="Amount" id="sellval" autocomplete="off">
+              <button id="sellamt" class="torn-btn">Withdraw</button>
+              <div id="preset-buttons">
+                ${presetAmounts.map(amount => `<button class="preset-btn torn-btn" data-amount="${amount}">${amount}</button>`).join('')}
+              </div>
+              <button id="edit-presets" class="torn-btn preset-manage">âœŽ</button>
+              <span id="responseStock"></span>
+            </div>
+          </div>`;
         $("#stockmarketroot").prepend(container);
         $("#stockid").on('change.stockVault', updateStock);
         $("#vaultall").on("click.stockVault", vault);
